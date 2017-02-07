@@ -3643,6 +3643,17 @@ a.thumbnail {
 body {
   background: #eee;
   font-family: 'Libre Baskerville';
-  font-size: 1rem; }
+  font-size: 1rem;
+  font-color: #111; }
   body p {
     line-height: 1.9; }
+  body h1 {
+    font-family: 'Montserrat';
+    font-size: 1.8rem; }
+
+.hero {
+  background-image: url("../img/placeholder.png");
+  height: 905px; }
+
+.intro {
+  padding-top: 420px; }

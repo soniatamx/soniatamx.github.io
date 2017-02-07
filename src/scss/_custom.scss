@@ -2,7 +2,22 @@ body {
   background: #eee;
   font-family: 'Libre Baskerville';
   font-size: 1rem;
+  font-color: #111;
   p {
     line-height: 1.9;
   }
+  h1{
+    font-family: 'Montserrat';
+    font-size:1.8rem;
+  }
 }
+.hero {
+  background-image: url('../img/placeholder.png');
+  height:905px;
+ }
+
+ .intro{
+   padding-top:420px;
+
+
+ }
