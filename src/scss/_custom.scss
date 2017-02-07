@@ -21,13 +21,27 @@ body {
   height:905px;
  }
 
- .logo {
+ #sticky-navigation {
+   padding: 50px auto;
+   display:block;
+       a {
+      font-family: 'Montserrat';
+      font-size: 1.1rem;
+      color: #333;
+      text-transform: uppercase;
+      margin: 20px auto;
+      text-align: center;
+      display: block;
+      &:hover { color:#555; }
+   }
+ }
+
+ #logo {
    display: block;
    width: 200px;
    height: 70px;
    margin: 55px auto;
  }
-
 
  .intro {
 /*/ small /*/
@@ -38,5 +52,4 @@ body {
   @media screen and (min-width: 40em) {
      padding-top: 200px;
    }
-
- }
+}

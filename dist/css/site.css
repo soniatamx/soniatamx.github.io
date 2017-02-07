@@ -3659,7 +3659,21 @@ body {
   background-size: cover;
   height: 905px; }
 
-.logo {
+#sticky-navigation {
+  padding: 50px auto;
+  display: block; }
+  #sticky-navigation a {
+    font-family: 'Montserrat';
+    font-size: 1.1rem;
+    color: #333;
+    text-transform: uppercase;
+    margin: 20px auto;
+    text-align: center;
+    display: block; }
+    #sticky-navigation a:hover {
+      color: #555; }
+
+#logo {
   display: block;
   width: 200px;
   height: 70px;
