@@ -3644,7 +3644,7 @@ body {
   background: #eee;
   font-family: 'Libre Baskerville';
   font-size: 1rem;
-  font-color: #111; }
+  color: #222; }
   body p {
     line-height: 1.9; }
   body h1 {
@@ -3652,8 +3652,25 @@ body {
     font-size: 1.8rem; }
 
 .hero {
-  background-image: url("../img/placeholder.png");
+  background: url("../img/placeholder.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 905px; }
 
+.logo {
+  display: block;
+  width: 200px;
+  height: 70px;
+  margin: 55px auto; }
+
 .intro {
-  padding-top: 420px; }
+  /*/ small /*/
+  /*/ medium and up /*/ }
+  @media screen and (max-width: 39.9375em) {
+    .intro {
+      padding-top: 150px; } }
+  @media screen and (min-width: 40em) {
+    .intro {
+      padding-top: 200px; } }

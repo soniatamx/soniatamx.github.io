@@ -2,22 +2,41 @@ body {
   background: #eee;
   font-family: 'Libre Baskerville';
   font-size: 1rem;
-  font-color: #111;
+  color: #222;
   p {
     line-height: 1.9;
   }
-  h1{
+  h1 {
     font-family: 'Montserrat';
     font-size:1.8rem;
   }
 }
+
 .hero {
-  background-image: url('../img/placeholder.png');
+  background: url('../img/placeholder.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height:905px;
  }
 
- .intro{
-   padding-top:420px;
+ .logo {
+   display: block;
+   width: 200px;
+   height: 70px;
+   margin: 55px auto;
+ }
 
+
+ .intro {
+/*/ small /*/
+@media screen and (max-width: 39.9375em) {
+      padding-top:150px
+    }
+/*/ medium and up /*/
+  @media screen and (min-width: 40em) {
+     padding-top: 200px;
+   }
 
  }

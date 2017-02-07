@@ -2,8 +2,6 @@
 var title = require('./title');
 var something = 'something';
 
-title();
-
 },{"./title":2}],2:[function(require,module,exports){
 function title() {
   document.getElementById('title').innerHTML = 'title set through src/js/title.js javascript file';
