@@ -9,6 +9,7 @@ body {
   h1 {
     font-family: 'Montserrat';
     font-size:1.8rem;
+    text-transform: uppercase;
   }
 }
 
@@ -36,6 +37,11 @@ body {
    }
  }
 
+ #sticky-navigation {
+   padding: 50px auto;
+   display:block;
+ }
+
  #logo {
    display: block;
    width: 200px;
@@ -46,10 +52,23 @@ body {
  .intro {
 /*/ small /*/
 @media screen and (max-width: 39.9375em) {
-      padding-top:150px
+      padding-top:100px
     }
 /*/ medium and up /*/
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 39.94em) {
      padding-top: 200px;
+   }
+}
+
+.skills {
+  margin: 60px auto 20px auto;
+    p{ width: 70%; }
+}
+
+.fi-brush, .fi-pencil {
+   &.iconic-lg {
+     &:before {
+       font-size: 40px;
+     }
    }
 }

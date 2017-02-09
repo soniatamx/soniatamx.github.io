@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Site</title>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -10,19 +11,19 @@
 
   <body>
     <section id="about" data-magellan-target="first"></section>
-    <div class="hero small-12 align-center">
-      <div class="row large-9 column" data-sticky-container>
-      <div id="sticky-navigation" data-sticky data-options="marginTop:0;" style="width:100%">
-      <nav data-magellan>
-        <ul class="horizontal menu expanded">
-        <li><a href="#about">About</a></li>
-        <li><a href="#second">Second Arrival</a></li>
-        <li><a href="#third">Third Arrival</a></li>
-        </ul>
-      </nav>
-    </div>
+<div class="hero small-12 align-center">
+  <div class="row large-9 column" data-sticky-container>
+        <div id="sticky-navigation" data-sticky data-options="marginTop:0;" style="width:100%">
+        <nav data-magellan>
+          <ul class="horizontal menu align-center">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
   </div>
-        <div class="intro row column small-12 medium-8 large-4 ">
+        <div class="intro row column small-12 medium-8 large-5 ">
          <div id="logo">
            <img src='/dist/img/logo.png' style="width:200px;height:70px;"/>
         </div>
@@ -34,10 +35,23 @@
         </p>
       </div>
     </div>
-    <div class="sections">
-      <section id="second" data-magellan-target="second">Second Section</section>
-      <section id="third" data-magellan-target="third">Third Section</section>
+
+    <section id="second" data-magellan-target="second"></section>
+    <div class="row skills">
+          <div class="small-12 large-6 column">
+        <h1><span class="fi-brush iconic-lg" title="brush" aria-hidden="true"></span> Design</h1><p>
+              Photoshop, Illustrator, InDesign, After Effects, Premiere, Hype, Omnigraffle, InVision
+            </p>
+          </div>
+          <div class="small-12 large-6 column">
+          <h1><span class="fi-pencil iconic-md" title="pencil" aria-hidden="true"></span> Code</h1><p>
+            HTML, CSS, SASS, PHP, Javascript, jQuery, Gulp, node.js, mustache
+          </p>
+          </div>
     </div>
+
+
+      <section id="third" data-magellan-target="third">Third Section</section>
 
     <script src="dist/js/foundation-scripts.js"></script>
     <script src="dist/js/app.js"></script>
