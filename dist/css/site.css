@@ -6244,6 +6244,12 @@ body {
     font-family: 'Montserrat';
     font-size: 1.8rem;
     text-transform: uppercase; }
+  body h2 {
+    font-family: 'Montserrat';
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 60px; }
 
 .hero {
   background: url("../img/placeholder.png") no-repeat center center fixed;
@@ -6251,7 +6257,17 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 905px; }
+  min-height: 905px; }
+
+.intro {
+  /*/ small /*/
+  /*/ medium and up /*/ }
+  @media screen and (max-width: 39.9375em) {
+    .intro {
+      padding-top: 100px; } }
+  @media screen and (min-width: 39.94em) {
+    .intro {
+      padding-top: 300px; } }
 
 #sticky-navigation {
   padding: 50px auto;
@@ -6261,7 +6277,7 @@ body {
     font-size: 1.1rem;
     color: #333;
     text-transform: uppercase;
-    margin: 20px auto;
+    margin: 20px;
     text-align: center;
     display: block; }
     #sticky-navigation a:hover {
@@ -6277,20 +6293,21 @@ body {
   height: 70px;
   margin: 55px auto; }
 
-.intro {
-  /*/ small /*/
-  /*/ medium and up /*/ }
-  @media screen and (max-width: 39.9375em) {
-    .intro {
-      padding-top: 100px; } }
-  @media screen and (min-width: 39.94em) {
-    .intro {
-      padding-top: 200px; } }
+#work {
+  padding-top: 70px;
+  background-color: #fff; }
 
 .skills {
-  margin: 60px auto 20px auto; }
+  margin: 60px auto; }
   .skills p {
     width: 70%; }
 
 .fi-brush.iconic-lg:before, .fi-pencil.iconic-lg:before {
   font-size: 40px; }
+
+.thumbnail {
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.2s linear; }
+  .thumbnail:hover {
+    opacity: 0.6; }
