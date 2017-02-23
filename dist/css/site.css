@@ -6234,7 +6234,7 @@ a.thumbnail {
     order: 6; } }
 
 body {
-  background: #eee;
+  background: #fafafa;
   font-family: 'Libre Baskerville';
   font-size: 1rem;
   color: #222; }
@@ -6246,10 +6246,12 @@ body {
     text-transform: uppercase; }
   body h2 {
     font-family: 'Montserrat';
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 60px; }
+    margin: 60px auto;
+    font-weight: bold;
+    color: #f8c7ca; }
 
 .hero {
   background: url("../img/placeholder.png") no-repeat center center fixed;
@@ -6293,8 +6295,12 @@ body {
   height: 70px;
   margin: 55px auto; }
 
+.full {
+  max-width: none; }
+
 #work {
-  padding-top: 70px;
+  padding-top: 50px;
+  padding-bottom: 35px;
   background-color: #fff; }
 
 .skills {
