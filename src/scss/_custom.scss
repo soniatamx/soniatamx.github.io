@@ -22,6 +22,10 @@ body {
 }
 }
 
+.full{
+max-width: 120rem;
+}
+
 .hero {
   background: url('../img/placeholder.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -38,7 +42,7 @@ body {
     }
 /*/ medium and up /*/
   @media screen and (min-width: 39.94em) {
-     padding-top: 300px;
+     padding-top: 230px;
    }
 }
 
@@ -70,9 +74,6 @@ body {
    margin: 55px auto;
  }
 
-  .full{
-  max-width: none;
-}
 
 #work {
   padding-top: 50px;
@@ -80,9 +81,20 @@ body {
   background-color: #fff;
 }
 
+#contact{
+margin-bottom:60px;
+  a {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.2rem;
+  color: #222;
+  border-bottom: solid #222 1px;
+  transition: all 0.2s linear;
+  &:hover { color:#777; }
+  }
+}
 
 .skills {
-  margin: 60px auto;
+  margin: 60px auto 50px auto;
     p{ width: 70%; }
 }
 
