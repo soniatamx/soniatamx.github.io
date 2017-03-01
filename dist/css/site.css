@@ -6872,7 +6872,7 @@ body {
   background: #fafafa;
   font-family: 'Libre Baskerville';
   font-size: 1rem;
-  color: #222; }
+  color: #1e1e1e; }
   body p {
     line-height: 1.9; }
   body h1 {
@@ -6958,16 +6958,16 @@ body {
 .thumbnail {
   margin-bottom: 0;
   border: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.17);
   transition: all 0.2s linear; }
   .thumbnail:hover {
-    opacity: 0.6; }
+    opacity: 0.8; }
 
 .reveal-overlay {
   background-color: rgba(10, 10, 10, 0.8); }
 
 .reveal {
-  padding: 40px;
+  padding: 6rem 6rem 4rem 6rem;
   margin: 0 auto;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.17); }
   .reveal h1 {
@@ -6976,5 +6976,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #f8c8cb !important;
-    padding-top: 10px;
-    padding-bottom: 20px; }
+    padding-top: 10px; }
+  .reveal img {
+    padding: 50px 0; }
