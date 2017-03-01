@@ -23,7 +23,7 @@ body {
 }
 
 .full{
-max-width: 120rem;
+max-width: 100rem;
 }
 
 .hero {
@@ -48,7 +48,7 @@ max-width: 120rem;
 
 
  #sticky-navigation {
-   padding: 50px auto;
+   padding: 80px auto;
    display:block;
        a {
       font-family: 'Montserrat';
@@ -106,6 +106,7 @@ margin-bottom:60px;
 }
 
 .thumbnail {
+  margin-bottom: 0;
   border: none;
    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.2s linear;
