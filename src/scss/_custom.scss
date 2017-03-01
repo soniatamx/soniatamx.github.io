@@ -106,9 +106,23 @@ margin-bottom:60px;
 }
 
 .thumbnail {
-  margin-bottom: 0;
-  border: none;
-   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-bottom: 0;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.17);
     transition: all 0.2s linear;
-     &:hover { opacity: 0.6 }
+    &:hover { opacity: 0.6 }
+}
+
+.reveal-overlay{
+    background-color: rgba(10, 10, 10, 0.80);
+}
+
+.reveal {
+  padding: 40px;
+  margin: 0 auto;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.17);
+  h1 { font-size: 2.8rem;	background: -webkit-linear-gradient(0deg,#f8c7ca 15%,#4892c0 48%,#51444a 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #f8c8cb!important; padding-top: 10px; padding-bottom: 20px; }
 }

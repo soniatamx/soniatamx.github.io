@@ -28,6 +28,7 @@ var files = {
       'node_modules/jquery/dist/jquery.js',
       'node_modules/what-input/dist/what-input.js',
       'node_modules/foundation-sites/dist/js/foundation.min.js',
+      'node_modules/motion-ui/dist/motion-ui.min.js',
       'src/vendor/js/*.js'
     ],
     dist: 'dist/js/'
