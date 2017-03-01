@@ -3661,7 +3661,7 @@ body {
     color: #f8c7ca; }
 
 .full {
-  max-width: 120rem; }
+  max-width: 100rem; }
 
 .hero {
   background: url("../img/placeholder.png") no-repeat center center fixed;
