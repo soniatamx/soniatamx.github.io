@@ -6967,15 +6967,23 @@ body {
   background-color: rgba(10, 10, 10, 0.8); }
 
 .reveal {
-  padding: 6rem 6rem 4rem 6rem;
+  /*/ small /*/
+  /*/ medium and up /*/
   margin: 0 auto;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.17); }
+  @media screen and (max-width: 39.9375em) {
+    .reveal {
+      padding: 1.5rem 3rem 0.5rem 3rem; } }
+  @media screen and (min-width: 39.94em) {
+    .reveal {
+      padding: 3.5rem 6rem 2.5rem 6rem; } }
   .reveal h1 {
-    font-size: 2.8rem;
+    font-size: 3.5rem;
+    line-height: 3rem;
     background: -webkit-linear-gradient(0deg, #f8c7ca 15%, #4892c0 48%, #51444a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #f8c8cb !important;
     padding-top: 10px; }
   .reveal img {
-    padding: 50px 0; }
+    padding: 35px 0 35px 0; }
