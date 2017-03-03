@@ -128,9 +128,18 @@ margin-bottom:60px;
      }
   margin: 0 auto;
   box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.17);
-  h1 { font-size: 3.5rem; line-height: 3rem;	background: -webkit-linear-gradient(0deg,#f8c7ca 15%,#4892c0 48%,#51444a 100%);
+  h1 {
+  font-size: 3.8em;
+  line-height: 3.5rem;
+  background: -webkit-linear-gradient(0deg,#f8c7ca 15%,#4892c0 48%,#51444a 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	color: #f8c8cb!important; padding-top:10px; }
-  img { padding: 35px 0 35px 0; }
+	color: #f8c8cb!important; padding-top:10px;
+  text-align: center;
+    }
+  img { padding: 35px 0; }
+}
+
+.ad {
+  margin: 20px 0 15px 0;
 }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>index</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color: #FFFFFF;
+			margin:0;
+			height:100%;
+		}
+	</style>
+
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=no" />
+	<script type="text/javascript" src="index.hyperesources/TweenLite.min.js"></script>
+	<script type="text/javascript" src="index.hyperesources/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="index.hyperesources/EasePack.min.js"></script>
+	<script type="text/javascript" src="index.hyperesources/TweenMax.min.js"></script>
+
+	
+	
+	<script>
+	var currentTime,newTime,randomNumb,jams,movementDetector,totalTime,randomizer,result,equalButton,plusButton,getTime,initY,futureY,direction,beforeTime,animActive;
+	</script>
+	<!-- end copy -->
+
+
+	<script type="text/javascript" charset="utf-8" src="index.hyperesources/HYPE-466.thin.min.js"></script>
+
+  </head>
+  <body>
+	
+	<!-- copy these lines to your document: -->
+
+	<div id="index_hype_container" style="margin:auto;position:relative;width:980px;height:670px;overflow:hidden;-webkit-tap-highlight-color: rgba(0,0,0,0);" aria-live="polite">
+		<div id = "legalDisclaimer">
+  <style>
+        /*=== BASE | fin ===============================*/
+        /*=== LEGAL | debut ============================*/
+        .lp-legal-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.5);
+            padding: 1px;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 9998;
+			pointer-events: none;
+            -webkit-transition: opacity .5s ease;
+        }
+        .lp-legal-bg.lp-legal-active {
+            opacity: 1;
+            -webkit-transform: translate3d(-1px,0,0);
+            -webkit-transition: opacity .5s ease, -webkit-transform 0 0 linear;
+        }
+        .lp-legal {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: auto;
+            font-family: helvetica, arial, sans-serif;
+            color: #bbbebf;
+            z-index: 9999;
+            -webkit-transform: translate3d(0,0,0);
+            -webkit-transition: -webkit-transform .5s ease;
+        }
+        .lp-legal.lp-legal-active {
+            -webkit-transform: translate3d(0,-100%,0);
+        }
+        .lp-legal-btn {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 50px;
+            height: 21px;
+            background: #404040;
+            font-size: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 175%;
+            cursor: pointer;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        .lp-legal-text {
+            position: relative;
+            float: left;
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            background: #404040;
+            font-size: 11px;
+            text-align: justify;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 5px;
+            -webkit-overflow-scrolling: touch;
+            overflow: auto;
+        }
+        /*=== LEGAL | fin ============================*/
+    </style>
+
+        <div class='lp-legal-bg'></div>
+        <div class='lp-legal'>
+            <div class='lp-legal-btn'>Legal</div>
+            <div class='lp-legal-text'>
+                    ®/™ Trademarks of Loblaws Inc. All rights reserved. © 2015 Loblaws Inc.
+                </div>
+        </div>
+        <!--=== LEGAL | fin ================================-->
+    </div>
+    <script>
+        /*=== LEGAL script | debut =========================*/
+        var legal = {
+            container: document.getElementsByClassName('lp-legal')[0],
+            btn: document.getElementsByClassName('lp-legal-btn')[0],
+            bg: document.getElementsByClassName('lp-legal-bg')[0],
+            animate: function() {
+                if(legal.bg.classList.contains('lp-legal-active')) {
+					legal.bg.style["pointer-events"] = "none";
+                    legal.container.classList.remove('lp-legal-active');
+                    legal.bg.classList.remove('lp-legal-active');
+                } else {
+					legal.bg.style["pointer-events"] = "auto";
+                    legal.container.classList.add('lp-legal-active');
+                    legal.bg.classList.add('lp-legal-active');
+                }
+            }
+        }
+        
+        legal.btn.onclick = function() {legal.animate()};
+        legal.bg.onclick = function() {legal.animate()};
+        /*=== LEGAL script | fin ===========================*/
+    </script>
+</div>
+
+	</div>
+
+	<!-- end copy -->
+
+
+	<script type="text/javascript" charset="utf-8">
+		//	HYPE.documents["index"]
+
+(function(){(function k(){var f="index.hyperesources",d="index",c="index_hype_container";if(false==!1)try{for(var g=document.getElementsByTagName("script"),a=0;a<g.length;a++){var b=g[a].src;if(null!=b&&-1!=b.indexOf("index_hype_generated_script.js")){f=b.substr(0,b.lastIndexOf("/"));break}}}catch(m){}if(true==!1&&null==window.HYPE_466)null==window.HYPE_dtl_466?(window.HYPE_dtl_466=[],window.HYPE_dtl_466.push(k),d=document.getElementsByTagName("head")[0],c=document.createElement("script"),
+a=navigator.userAgent.match(/MSIE (\d+\.\d+)/),a=parseFloat(a&&a[1])||null,c.type="text/javascript",c.src=f+"/"+(!0==(null!=a&&10>a||false==!0)?"HYPE-466.full.min.js":"HYPE-466.thin.min.js"),d.appendChild(c)):window.HYPE_dtl_466.push(k);else{window.HYPE_dtl_466=[];g=window.HYPE.documents;if(null!=g[d]){b=1;a=d;do d=""+a+"-"+b++;while(null!=g[d]);for(var e=document.getElementsByTagName("div"),b=!1,a=0;a<e.length;a++)if(e[a].id==c&&null==e[a].getAttribute("HYP_dn")){var b=
+1,h=c;do c=""+h+"-"+b++;while(null!=document.getElementById(c));e[a].id=c;b=!0;break}if(!1==b)return}b=[];b=[{name:"dragCaller",source:"function(hypeDocument, element, event) {if(event['hypeGesturePhase']=='start'){\n\n//equalButton,plusButton\ninitY=event.clientY;\n\n\n\nbeforeTime= Math.round(hypeDocument.currentTimeInTimelineNamed('timelineName'))\n\n\n}\nif(event['hypeGesturePhase']=='move'){\nfutureY=event.clientY;\nnowtime = hypeDocument.currentTimeInTimelineNamed('timelineName')\n  if ((futureY - initY) > 0) {\n\t            direction = 'up'\n\t        } else {\n\t            direction = 'down'\n\t        }\nif((nowtime!=0 ) && (nowtime!=7)){\nTweenLite.to(result, 0.4, { ease: Back.easeIn.config(2), opacity:0, x:20, delay:0.5 });\nTweenLite.to(plusButton, 0.4, { ease: Back.easeIn.config(2), scale:0 });\nTweenLite.to(equalButton, 0.4, { ease: Back.easeIn.config(2), scale:0 ,delay:0.2});\n}\n\nif(nowtime==0){\nspinner1.goToTimeInTimelineNamed(0, 'timelineName')\n\t                spinner2.goToTimeInTimelineNamed(3, 'timelineName')\n\t                resultz.goToTimeInTimelineNamed(0, 'timelineName')\n\n\n}\n\nif(nowtime==7){\n resultz.goToTimeInTimelineNamed(4, 'timelineName')\n\t                spinner1.goToTimeInTimelineNamed(1, 'timelineName')\n\t                spinner2.goToTimeInTimelineNamed(1, 'timelineName')\n\n\n}\n\n}\nif(event['hypeGesturePhase']=='end'){\nTweenLite.to(plusButton, 0.4, { ease: Back.easeOut.config(2), scale:1,delay:2.5 });\nTweenLite.to(result, 0.8, { ease: Back.easeOut.config(2), opacity:1, x:0, delay:0.5 ,delay:3.4});\nTweenLite.to(equalButton, 0.4, { ease: Back.easeOut.config(2), scale:1,delay:2.8});\nclearInterval(movementDetector);\nclearInterval(randomizer);\n\twindow.CheckMovement();\n\tif(nowtime==0){\nspinner1.goToTimeInTimelineNamed(0, 'timelineName')\n\t                spinner2.goToTimeInTimelineNamed(3, 'timelineName')\n\t                resultz.goToTimeInTimelineNamed(0, 'timelineName')\n\n\n}\n\nif(nowtime==7){\n resultz.goToTimeInTimelineNamed(4, 'timelineName')\n\t                spinner1.goToTimeInTimelineNamed(1, 'timelineName')\n\t                spinner2.goToTimeInTimelineNamed(1, 'timelineName')\n\n\n}\n\n}\n\n}",identifier:"37"},{name:"dragdetector",source:"function(hypeDocument, element, event) {}",identifier:"38"},{name:"setup",source:"function(hypeDocument, element, event) {\tjams = hypeDocument.getElementById('jamsJar')\n\tspinFor = 2;\n\tvar z = 0;\n\tresultz = hypeDocument.getSymbolInstanceById('result')\n\tcurrentTime = Math.round(hypeDocument.currentTimeInTimelineNamed('timelineName'))\n\ttotalTime = hypeDocument.durationForTimelineNamed('timelineName')\n\tspinners = document.getElementsByClassName('spinner')\n\tplusButton = hypeDocument.getElementById('plusButton')\n\tequalButton = hypeDocument.getElementById('equalButton')\n\tspinner1 = hypeDocument.getSymbolInstanceById(spinners[0].id)\n\tspinner2 = hypeDocument.getSymbolInstanceById(spinners[1].id)\n\tspinner1l = spinner1.durationForTimelineNamed('timelineName')\n\tresult = hypeDocument.getElementById('result')\n\tanimActive=false;\n\tspinner2l = spinner2.durationForTimelineNamed('timelineName')\n\n\tvar randomNumb\n\n\tfunction getRandomInt(min, max) {\n\t    return Math.floor(Math.random() * (max - min)) + min;\n\t}\n\n\twindow.CheckMovement = function() {\n\t    movementDetector = setInterval(myTimer, 100);\n\t    getTime = currentTime;\n\n\t    function myTimer() {\n\t        currentTime = hypeDocument.currentTimeInTimelineNamed('timelineName');\n\t      \n\t        if (getTime != currentTime) {\n\t            getTime = currentTime;\n\t        } else {\n\n\t            clearInterval(movementDetector);\n\t            //console.log(direction,getTime)\n\t            if (beforeTime == 0) {\n\t                if (getTime != 0) {\n\t                    seeFrame();\n\t                }\n\t                else{\n\t                animActive=false;\n\t                \n\t                }\n\t            } else if (beforeTime == totalTime) {\n\t                if (getTime != totalTime) {\n\t                    seeFrame();\n\t                }\n\t                 else{\n\t                animActive=false;\n\t                \n\t                }\n\t            } else {\n\t                seeFrame();\n\t            }\n\n\t        }\n\n\n\t    }\n\t};\n\n\tfunction seeFrame() {\n\t\tanimActive=true;\n\t\t\n\t    var cT = Math.round(currentTime * 10) / 10\n\t    var tT = [0, (Math.floor((totalTime * 0.25) * 10) / 10), (Math.round((totalTime * 0.5) * 10) / 10), (Math.round((totalTime * 0.75) * 10) / 10), totalTime]\n\n\t    for (i = 0; i < 5; i++) {\n\t        if (tT[i] == cT) {\n\n\n\n\t            wereat = ('frame' + i)\n\t            z = 0\n\t            Randomize()\n\n\t        }\n\t    }\n\n\n\n\t}\n\n\tfunction Randomize() {\n\t    randomizer = setInterval(function() {\n\t        randomizerTimer()\n\t    }, 200);\n\n\t    function randomizerTimer() {\n\n\n\t        newNumb = getRandomInt(0, (spinner1l + 1))\n\t        if (randomNumb == newNumb) {\n\t            randomNumb = getRandomInt(0, (spinner1l + 1))\n\t        } else {\n\t            randomNumb = newNumb\n\t        }\n\n\t        spinner1.goToTimeInTimelineNamed(randomNumb, 'timelineName')\n\n\t        spinner2.goToTimeInTimelineNamed(randomNumb, 'timelineName')\n\n\t        z++\n\t        if (z == spinFor * 5) {\n\t            clearInterval(randomizer)\n\t            if (wereat == 'frame0') {\n\t                spinner1.goToTimeInTimelineNamed(0, 'timelineName')\n\t                spinner2.goToTimeInTimelineNamed(3, 'timelineName')\n\t                resultz.goToTimeInTimelineNamed(0, 'timelineName')\n\t            }\n\t            if (wereat == 'frame1') {\n\t                resultz.goToTimeInTimelineNamed(1, 'timelineName')\n\t                spinner1.goToTimeInTimelineNamed(3, 'timelineName')\n\t                spinner2.goToTimeInTimelineNamed(2, 'timelineName')\n\t            }\n\t            if (wereat == 'frame2') {\n\t                resultz.goToTimeInTimelineNamed(2, 'timelineName')\n\t                spinner1.goToTimeInTimelineNamed(2, 'timelineName')\n\t                spinner2.goToTimeInTimelineNamed(1, 'timelineName')\n\t            }\n\t            if (wereat == 'frame3') {\n\t                resultz.goToTimeInTimelineNamed(3, 'timelineName')\n\t                spinner1.goToTimeInTimelineNamed(3, 'timelineName')\n\t                spinner2.goToTimeInTimelineNamed(0, 'timelineName')\n\t            }\n\t            if (wereat == 'frame4') {\n\t                resultz.goToTimeInTimelineNamed(4, 'timelineName')\n\t                spinner1.goToTimeInTimelineNamed(1, 'timelineName')\n\t                spinner2.goToTimeInTimelineNamed(1, 'timelineName')\n\t            }\n\n\n\n\t        }\n\n\n\t    }\n\n\t}}",identifier:"238"}];e={};h={};for(a=0;a<b.length;a++)try{h[b[a].identifier]=b[a].name,e[b[a].name]=eval("(function(){return "+b[a].source+"})();")}catch(l){window.console&&window.console.log(l),e[b[a].name]=function(){}}f=new HYPE_466(d,c,{"10":{p:1,n:"bot_ing.jpg",g:"14",t:"@1x"},"2":{n:"EasePack.min.js"},"15":{p:1,n:"jams2.jpg",g:"85",t:"@1x"},"3":{n:"TweenMax.min.js"},"11":{p:1,n:"cta_get.png",g:"292",t:"@1x"},"4":{p:1,n:"1.jpg",g:"252",t:"@1x"},"16":{p:1,n:"text.png",g:"282",t:"@1x"},"5":{p:1,n:"2.jpg",g:"263",t:"@1x"},"12":{p:1,n:"cta_web.png",g:"290",t:"@1x"},"17":{p:1,n:"top_ing.jpg",g:"10",t:"@1x"},"6":{p:1,n:"3.jpg",g:"261",t:"@1x"},"13":{p:1,n:"icons_equal.png",g:"248",t:"@1x"},"7":{p:1,n:"4.jpg",g:"257",t:"@1x"},"0":{n:"TweenLite.min.js"},"8":{p:1,n:"5.jpg",g:"259",t:"@1x"},"14":{p:1,n:"icons_plus.png",g:"246",t:"@1x"},"1":{n:"CSSPlugin.min.js"},"9":{p:1,n:"bg.jpg",g:"161",t:"@1x"}},f,[],e,[{n:"Untitled Scene",o:"157",X:[0]}],[{A:{a:[{b:"kTimelineDefaultIdentifier",symbolOid:"158",p:7},{p:4,h:"238"}]},o:"159",p:"600px",x:0,cA:false,Z:670,Y:980,c:"#FFFFFF",L:[],bY:1,d:980,U:{"312":{V:{"Main Timeline":"337"},W:"337",n:"result"},"327":{V:{"Main Timeline":"338"},W:"338",n:"spinnertop"},"330":{V:{"Main Timeline":"339"},W:"339",n:"snipperbot"}},T:{"337":{i:"337",n:"Main Timeline",z:4,b:[],a:[{f:"a",y:0,z:1,i:"e",e:0,s:1,o:"316"},{f:"a",y:0,z:1,i:"b",e:-74,s:-149,o:"324"},{f:"a",y:0,z:1,i:"e",e:1,s:0,o:"314"},{f:"a",y:0,z:0.1,i:"b",e:429,s:314,o:"325"},{f:"a",y:0.1,z:0.06,i:"a",e:-3,s:-3,o:"325"},{y:0.1,i:"b",s:429,z:0,o:"325",f:"c"},{y:0.16,i:"a",s:-3,z:0,o:"325",f:"c"},{f:"a",y:0.19,z:0.11,i:"a",e:-3,s:-3,o:"315"},{f:"a",y:0.19,z:0.11,i:"b",e:314,s:434,o:"315"},{f:"a",y:1,z:1,i:"e",e:1,s:0,o:"319"},{y:1,i:"e",s:0,z:0,o:"316",f:"c"},{f:"a",y:1,z:0.09,i:"a",e:-3,s:-3,o:"315"},{f:"a",y:1,z:1,i:"b",e:-33,s:-74,o:"324"},{f:"a",y:1,z:1,i:"e",e:0,s:1,o:"314"},{f:"a",y:1,z:0.09,i:"b",e:429,s:314,o:"315"},{y:1.09,i:"a",s:-3,z:0,o:"315",f:"c"},{y:1.09,i:"b",s:429,z:0,o:"315",f:"c"},{f:"c",y:1.2,z:0.1,i:"a",e:-3,s:-3,o:"321"},{f:"a",y:1.2,z:0.1,i:"b",e:314,s:434,o:"321"},{f:"a",y:2,z:1,i:"e",e:1,s:0,o:"313"},{f:"a",y:2,z:0.1,i:"a",e:-3,s:-3,o:"321"},{f:"a",y:2,z:1,i:"e",e:0,s:1,o:"319"},{y:2,i:"e",s:0,z:0,o:"314",f:"c"},{f:"a",y:2,z:1,i:"b",e:6,s:-33,o:"324"},{f:"a",y:2,z:0.1,i:"b",e:429,s:314,o:"321"},{y:2.1,i:"a",s:-3,z:0,o:"321",f:"c"},{y:2.1,i:"b",s:429,z:0,o:"321",f:"c"},{f:"c",y:2.2,z:0.1,i:"a",e:-3,s:-3,o:"326"},{f:"a",y:2.2,z:0.1,i:"b",e:314,s:434,o:"326"},{f:"a",y:3,z:1,i:"e",e:1,s:0,o:"320"},{f:"a",y:3,z:0.1,i:"a",e:-3,s:-3,o:"326"},{f:"a",y:3,z:1,i:"e",e:0,s:1,o:"313"},{y:3,i:"e",s:0,z:0,o:"319",f:"c"},{f:"a",y:3,z:1,i:"b",e:-112,s:6,o:"324"},{f:"a",y:3,z:0.1,i:"b",e:429,s:314,o:"326"},{y:3.1,i:"a",s:-3,z:0,o:"326",f:"c"},{y:3.1,i:"b",s:429,z:0,o:"326",f:"c"},{f:"c",y:3.2,z:0.1,i:"a",e:-3,s:-3,o:"317"},{f:"a",y:3.2,z:0.1,i:"b",e:314,s:434,o:"317"},{y:4,i:"e",s:1,z:0,o:"320",f:"c"},{y:4,i:"a",s:-3,z:0,o:"317",f:"a"},{y:4,i:"e",s:0,z:0,o:"313",f:"c"},{y:4,i:"b",s:-112,z:0,o:"324",f:"c"},{y:4,i:"b",s:314,z:0,o:"317",f:"c"}],f:30},"338":{i:"338",n:"Main Timeline",z:3,b:[],a:[{f:"a",y:0,z:1,i:"b",e:-170.667,s:0,o:"329"},{f:"c",y:0,z:2,i:"b",e:0,s:0,o:"328"},{f:"a",y:1,z:1,i:"b",e:-342,s:-170.667,o:"329"},{f:"c",y:2,z:1,i:"b",e:0,s:0,o:"328"},{f:"a",y:2,z:1,i:"b",e:-514,s:-342,o:"329"},{y:3,i:"b",s:0,z:0,o:"328",f:"c"},{y:3,i:"b",s:-514,z:0,o:"329",f:"c"}],f:30},kTimelineDefaultIdentifier:{i:"kTimelineDefaultIdentifier",n:"Main Timeline",z:7,b:[],a:[{f:"b",y:0,z:7,i:"b",e:-1242,s:0,o:"310"},{f:"c",p:2,y:1.22,z:1.23,i:"ActionHandler",e:{a:[{b:"kTimelineDefaultIdentifier",symbolOid:"158",p:7}]},s:{a:[{b:"kTimelineDefaultIdentifier",symbolOid:"158",p:7}]},o:"kTimelineDefaultIdentifier"},{f:"c",p:2,y:3.15,z:1.23,i:"ActionHandler",e:{a:[{b:"kTimelineDefaultIdentifier",symbolOid:"158",p:7}]},s:{a:[{b:"kTimelineDefaultIdentifier",symbolOid:"158",p:7}]},o:"kTimelineDefaultIdentifier"},{f:"c",p:2,y:5.08,z:1.22,i:"ActionHandler",e:{a:[{b:"kTimelineDefaultIdentifier",symbolOid:"158",p:7}]},s:{a:[{b:"kTimelineDefaultIdentifier",symbolOid:"158",p:7}]},o:"kTimelineDefaultIdentifier"},{y:7,i:"b",s:-1242,z:0,o:"310",f:"c"},{f:"c",p:2,y:7,z:0,i:"ActionHandler",s:{a:[{b:"kTimelineDefaultIdentifier",symbolOid:"158",p:7}]},o:"kTimelineDefaultIdentifier"}],f:30},"339":{i:"339",n:"Main Timeline",z:3,b:[],a:[{f:"a",y:0,z:1,i:"b",e:-140,s:0,o:"332"},{f:"a",y:1,z:1,i:"b",e:-278.66699999999997,s:-140,o:"332"},{f:"a",y:2,z:1,i:"b",e:-418,s:-278.66699999999997,o:"332"},{y:3,i:"b",s:-418,z:0,o:"332",f:"c"}],f:30}},bZ:180,O:["335","317","326","321","315","325","318","322","324","323","320","313","319","314","316","312","336","334","311","310","309","329","328","327","332","331","330","333"],v:{"331":{k:"div",x:"hidden",c:186,d:138,z:7,a:0,j:"absolute",bF:"330",b:0},"323":{k:"div",x:"hidden",c:400,d:28,z:16,r:"inline",a:43,j:"absolute",bF:"312",b:321},"315":{c:54,d:50,I:"Solid",e:0,J:"Solid",K:"Solid",g:"#E8EBED",L:"Solid",aP:"pointer",M:1,N:1,bF:"312",A:"#D8DDE4",x:"visible",aA:{a:[{j:"http://www.presidentschoice.ca/en_CA/recipes/recipeslisting/country_tea_cake_with_raspberry_preserves.html",p:5,k:true}]},j:"absolute",O:1,k:"div",C:"#D8DDE4",z:20,B:"#D8DDE4",D:"#D8DDE4",P:1,a:-3,b:434},"336":{h:"248",p:"no-repeat",x:"visible",i:"equalButton",q:"100% 100%",a:469,j:"absolute",b:424,c:32,k:"div",z:9,d:22,r:"inline"},"328":{k:"div",x:"hidden",c:186,d:171,z:8,a:0,j:"absolute",bF:"327",b:0},"311":{c:405,d:301,I:"Solid",r:"inline",J:"Solid",K:"Solid",L:"Solid",M:5,w:"",N:5,A:"#D8DDE4",x:"visible",j:"absolute",B:"#D8DDE4",k:"div",O:5,C:"#D8DDE4",z:6,P:5,D:"#D8DDE4",a:44,b:265},"332":{h:"14",p:"repeat-y",x:"visible",a:0,b:0,j:"absolute",r:"inline",c:186,k:"div",z:1,d:556,bF:"331"},"324":{h:"282",p:"no-repeat",x:"visible",a:14,q:"100% 100%",b:-149,j:"absolute",bF:"323",c:350,k:"div",z:2,d:174,r:"inline"},"316":{w:"",h:"252",p:"no-repeat",x:"visible",a:0,q:"100% 100%",b:0,j:"absolute",bF:"312",z:11,k:"div",c:435,d:310,r:"inline",e:1},"329":{h:"10",p:"no-repeat",x:"visible",a:0,q:"100% 100%",b:0,j:"absolute",bF:"328",c:186,k:"div",z:1,d:683,r:"inline"},"320":{h:"259",p:"no-repeat",x:"visible",a:1,q:"100% 100%",b:0,j:"absolute",bF:"312",z:15,k:"div",c:435,d:310,r:"inline",e:0},"312":{x:"visible",i:"result",a:512,cA:false,j:"absolute",b:267,c:435,k:"div",bY:1,d:310,z:12,bX:false,bZ:180,cV:[]},"333":{h:"161",p:"no-repeat",x:"visible",a:0,q:"100% 100%",b:0,j:"absolute",r:"inline",c:980,k:"div",z:1,d:670},"325":{c:54,d:50,I:"Solid",e:0,J:"Solid",K:"Solid",g:"#E8EBED",L:"Solid",aP:"pointer",M:1,N:1,bF:"312",A:"#D8DDE4",x:"visible",aA:{a:[{j:"http://www.presidentschoice.ca/en_CA/recipes/recipeslisting/strawberries-and-jam-cheesecake.html",p:5,k:true}]},j:"absolute",O:1,k:"div",C:"#D8DDE4",z:19,B:"#D8DDE4",D:"#D8DDE4",P:1,a:-3,b:314},"317":{c:54,d:50,I:"Solid",e:0,J:"Solid",K:"Solid",g:"#E8EBED",L:"Solid",aP:"pointer",M:1,N:1,bF:"312",A:"#D8DDE4",x:"visible",aA:{a:[{j:"http://www.presidentschoice.ca/en_CA/recipes/recipeslisting/peachy-almond-jalousie.html",p:5,k:true}]},j:"absolute",O:1,k:"div",C:"#D8DDE4",z:23,B:"#D8DDE4",D:"#D8DDE4",P:1,a:-3,b:434},"309":{k:"div",x:"hidden",c:237,d:307,z:5,a:47,j:"absolute",b:267},"321":{c:54,d:50,I:"Solid",e:0,J:"Solid",K:"Solid",g:"#E8EBED",L:"Solid",aP:"pointer",M:1,N:1,bF:"312",A:"#D8DDE4",x:"visible",aA:{a:[{j:"http://www.presidentschoice.ca/en_CA/recipes/recipeslisting/cherry_almond_strudel.html",p:5,k:true}]},j:"absolute",O:1,k:"div",C:"#D8DDE4",z:21,B:"#D8DDE4",D:"#D8DDE4",P:1,a:-3,b:434},"313":{h:"257",p:"no-repeat",x:"visible",a:1,q:"100% 100%",b:0,j:"absolute",bF:"312",z:14,k:"div",c:435,d:308.58100000000002,r:"inline",e:0},"334":{h:"246",p:"no-repeat",x:"visible",i:"plusButton",q:"100% 100%",a:254,j:"absolute",b:417,c:36,k:"div",z:8,d:36,r:"inline"},"326":{c:54,d:50,I:"Solid",e:0,J:"Solid",K:"Solid",g:"#E8EBED",L:"Solid",aP:"pointer",M:1,N:1,bF:"312",A:"#D8DDE4",x:"visible",aA:{a:[{j:"http://www.presidentschoice.ca/en_CA/recipes/recipeslisting/blueberry-cheese-blintzes.html",p:5,k:true}]},j:"absolute",O:1,k:"div",C:"#D8DDE4",z:22,B:"#D8DDE4",D:"#D8DDE4",P:1,a:-3,b:434},"318":{h:"292",p:"no-repeat",x:"visible",a:55,q:"100% 100%",b:352,j:"absolute",bF:"312",c:77,k:"div",z:18,d:16,r:"inline"},"330":{x:"visible",a:270,cA:false,b:433,j:"absolute",bX:false,c:186,k:"div",bY:1,d:138,z:2,cP:"spinner",bZ:180,cV:[]},"322":{w:"",h:"290",p:"no-repeat",x:"visible",a:3,q:"100% 100%",b:323,j:"absolute",bF:"312",z:17,k:"div",c:40,d:40,r:"inline"},"314":{h:"263",p:"no-repeat",x:"visible",a:-1,q:"100% 100%",b:0,j:"absolute",bF:"312",z:12,k:"div",c:435,d:309.28899999999999,r:"inline",e:0},"335":{c:235,d:311,I:"Solid",e:0,J:"Solid",K:"Solid",g:"#E8EBED",L:"Solid",aP:"pointer",M:1,bN:{a:[{y:true,b:"kTimelineDefaultIdentifier",A:0,p:10,c:1,symbolOid:"158"},{p:4,h:"37"}]},N:1,A:"#D8DDE4",x:"visible",j:"absolute",k:"div",O:1,B:"#D8DDE4",C:"#D8DDE4",z:13,P:1,D:"#D8DDE4",a:41,b:264},"327":{x:"visible",a:270,cA:false,b:267,j:"absolute",bX:false,c:186,k:"div",bY:1,d:170,z:3,cP:"spinner",bZ:180,cV:[]},"319":{h:"261",p:"no-repeat",x:"visible",a:0,q:"100% 100%",b:0,j:"absolute",bF:"312",z:13,k:"div",c:435,d:310,r:"inline",e:0},"310":{w:"",h:"85",p:"repeat-y",x:"visible",i:"jamsJar",a:-2,b:0,j:"absolute",bF:"309",z:1,k:"div",c:229,d:1550,r:"inline"}}}],{},h,{},
+0,false,false,true,-1,true,true,true);g[d]=f.API;document.getElementById(c).setAttribute("HYP_dn",d);f.z_o(this.body)}})();})();
+
+	</script>
+  </body>
+</html>
