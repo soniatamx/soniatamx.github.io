@@ -6990,7 +6990,8 @@ body {
     padding: 35px 0; }
 
 .ad {
-  margin: 20px 0 15px 0; }
+  margin: 20px 0 15px 0;
+  border: none; }
 
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .transform {
