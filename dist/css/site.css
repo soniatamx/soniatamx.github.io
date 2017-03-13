@@ -6991,3 +6991,8 @@ body {
 
 .ad {
   margin: 20px 0 15px 0; }
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .transform {
+    transform: scale(0.75);
+    margin: -4rem 0 -4rem -8.5rem; } }

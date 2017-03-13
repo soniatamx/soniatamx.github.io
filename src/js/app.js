@@ -22,3 +22,12 @@ function instantiateModals() {
 }
 
 instantiateModals();
+
+$('#galleryModal-3').hover(function() {
+  $('#nordstrom-video').get(0).play();
+});
+
+$(window).resize(function() {
+  var resizeableIframe = document.getElementById('resizeable-iframe');
+  console.log(resizeableIframe);
+});
