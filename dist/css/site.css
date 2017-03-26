@@ -4344,7 +4344,7 @@ body {
       padding-top: 100px; } }
   @media screen and (min-width: 39.94em) {
     .intro {
-      padding-top: 230px; } }
+      padding-top: 200px; } }
 
 #sticky-navigation {
   padding: 80px auto;
@@ -4431,7 +4431,8 @@ body {
     @media screen and (max-width: 39.9375em) {
       .reveal h1 {
         font-size: 2.5rem;
-        line-height: 2.5rem; } }
+        line-height: 2.5rem;
+        font-weight: 700; } }
   .reveal img {
     padding: 35px 0; }
 
