@@ -29,5 +29,4 @@ $('#galleryModal-3').hover(function() {
 
 $(window).resize(function() {
   var resizeableIframe = document.getElementById('resizeable-iframe');
-  console.log(resizeableIframe);
 });
