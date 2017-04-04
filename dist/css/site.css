@@ -6898,14 +6898,13 @@ body {
   -o-background-size: cover;
   background-size: cover;
   min-height: 905px;
-  /*/ small /*/
   /*/ medium /*/ }
-  @media screen and (max-width: 39.9375em) {
+  @media print, screen and (min-width: 40em) {
     .hero {
-      background: url("../img/bg.jpg") no-repeat center center; } }
-  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      background: url("../img/bg-medium.jpg") no-repeat center center; } }
+  @media print, screen and (min-width: 64em) {
     .hero {
-      background: url("../img/bg2.jpg") no-repeat center center; } }
+      background: url("../img/bg-large.jpg") no-repeat center center; } }
 
 .intro {
   /*/ small /*/

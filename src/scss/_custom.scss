@@ -33,14 +33,13 @@ max-width: 100rem;
   -o-background-size: cover;
   background-size: cover;
   min-height:905px;
-  /*/ small /*/
-@include breakpoint(small only) {
-    background: url('../img/bg.jpg') no-repeat center center;
-      }
   /*/ medium /*/
-@include breakpoint(medium only) {
-    background: url('../img/bg2.jpg') no-repeat center center;
+@include breakpoint(medium) {
+    background: url('../img/bg-medium.jpg') no-repeat center center;
      }
+ @include breakpoint(large) {
+         background: url('../img/bg-large.jpg') no-repeat center center;
+          }
  }
 
  .intro {
