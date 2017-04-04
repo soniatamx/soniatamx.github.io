@@ -6897,15 +6897,30 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 905px; }
+  min-height: 905px;
+  /*/ small /*/
+  /*/ medium /*/ }
+  @media screen and (max-width: 39.9375em) {
+    .hero {
+      background: url("../img/bg.jpg") no-repeat center center; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .hero {
+      background: url("../img/bg2.jpg") no-repeat center center; } }
 
 .intro {
   /*/ small /*/
-  /*/ medium and up /*/ }
+  /*/ medium /*/
+  /*/ large /*/ }
   @media screen and (max-width: 39.9375em) {
     .intro {
       padding-top: 100px; } }
-  @media screen and (min-width: 39.94em) {
+  @media screen and (max-width: 39.9375em) {
+    .intro p {
+      padding: 0 15px; } }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .intro {
+      padding-top: 150px; } }
+  @media screen and (min-width: 64em) {
     .intro {
       padding-top: 190px; } }
 
@@ -6968,7 +6983,7 @@ body {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.17);
   transition: all 0.2s linear; }
   .thumbnail:hover {
-    opacity: 0.8; }
+    opacity: 0.75; }
 
 .reveal-overlay {
   background-color: rgba(10, 10, 10, 0.8); }

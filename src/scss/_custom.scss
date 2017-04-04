@@ -33,15 +33,32 @@ max-width: 100rem;
   -o-background-size: cover;
   background-size: cover;
   min-height:905px;
+  /*/ small /*/
+  @media screen and (max-width: 39.9375em) {
+    background: url('../img/bg.jpg') no-repeat center center;
+      }
+  /*/ medium /*/
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    background: url('../img/bg2.jpg') no-repeat center center;
+     }
  }
 
  .intro {
-/*/ small /*/
-@media screen and (max-width: 39.9375em) {
-      padding-top:100px
+     /*/ small /*/
+   @media screen and (max-width: 39.9375em) {
+      padding-top:100px;
     }
-/*/ medium and up /*/
-  @media screen and (min-width: 39.94em) {
+    p{
+    @media screen and (max-width: 39.9375em) {
+         padding: 0 15px;
+    }
+  }
+      /*/ medium /*/
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+      padding-top: 150px;
+    }
+      /*/ large /*/
+    @media screen and (min-width: 64em) {
      padding-top: 190px;
    }
 }
@@ -117,7 +134,7 @@ margin-bottom:60px;
     border: none;
     box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 1px 1px rgba(0,0,0,0.17);
     transition: all 0.2s linear;
-    &:hover { opacity: 0.8 }
+    &:hover { opacity: 0.75 }
 }
 
 .reveal-overlay{
