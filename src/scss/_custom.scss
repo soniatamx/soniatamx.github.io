@@ -34,11 +34,11 @@ max-width: 100rem;
   background-size: cover;
   min-height:905px;
   /*/ small /*/
-  @media screen and (max-width: 39.9375em) {
+@include breakpoint(small only) {
     background: url('../img/bg.jpg') no-repeat center center;
       }
   /*/ medium /*/
-    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+@include breakpoint(medium only) {
     background: url('../img/bg2.jpg') no-repeat center center;
      }
  }
@@ -55,7 +55,7 @@ max-width: 100rem;
   }
       /*/ medium /*/
     @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-      padding-top: 80px;
+      padding-top:40px;
     }
       /*/ large /*/
     @media screen and (min-width: 64em) {
