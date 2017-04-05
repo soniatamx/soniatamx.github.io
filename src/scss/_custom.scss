@@ -37,8 +37,8 @@ max-width: 100rem;
 @include breakpoint(medium) {
     background: url('../img/bg-medium.jpg') no-repeat center center;
      }
- @include breakpoint(large) {
-         background: url('../img/bg-large.jpg') no-repeat center center;
+ @include breakpoint(xlarge) {
+         background: url('../img/bg-xlarge.jpg') no-repeat center center;
           }
  }
 

@@ -6902,9 +6902,9 @@ body {
   @media print, screen and (min-width: 40em) {
     .hero {
       background: url("../img/bg-medium.jpg") no-repeat center center; } }
-  @media print, screen and (min-width: 64em) {
+  @media screen and (min-width: 75em) {
     .hero {
-      background: url("../img/bg-large.jpg") no-repeat center center; } }
+      background: url("../img/bg-xlarge.jpg") no-repeat center center; } }
 
 .intro {
   /*/ small /*/
