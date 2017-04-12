@@ -37,6 +37,7 @@ max-width: 100rem;
 @include breakpoint(medium) {
     background: url('../img/bg-medium.jpg') no-repeat center center;
      }
+
  @include breakpoint(xlarge) {
          background: url('../img/bg-xlarge.jpg') no-repeat center center;
           }
@@ -58,14 +59,13 @@ max-width: 100rem;
     }
       /*/ large /*/
     @media screen and (min-width: 64em) {
-     padding-top: 190px;
+     padding-top: 90px;
    }
 }
 
 
  #sticky-navigation {
    padding: 80px auto;
-   top: 104px;
    display:block;
        a {
       font-family: 'Montserrat';
@@ -85,7 +85,6 @@ max-width: 100rem;
 
  .top-nav{
    background: rgba(255, 255, 255, 0);
-   position: fixed;
    z-index: 500;
    width: 100%;
  }

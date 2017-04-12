@@ -6921,11 +6921,10 @@ body {
       padding-top: 40px; } }
   @media screen and (min-width: 64em) {
     .intro {
-      padding-top: 190px; } }
+      padding-top: 90px; } }
 
 #sticky-navigation {
   padding: 80px auto;
-  top: 104px;
   display: block; }
   #sticky-navigation a {
     font-family: 'Montserrat';
@@ -6944,7 +6943,6 @@ body {
 
 .top-nav {
   background: rgba(255, 255, 255, 0);
-  position: fixed;
   z-index: 500;
   width: 100%; }
 
