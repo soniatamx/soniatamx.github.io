@@ -44,29 +44,31 @@ max-width: 100rem;
  }
 
  .intro {
+   padding-top: 190px;
      /*/ small /*/
-   @media screen and (max-width: 39.9375em) {
-      padding-top:100px;
-    }
-    p{
+  //  @media screen and (max-width: 39.9375em) {
+  //     padding-top:190px;
+  //   }
+  p {
     @media screen and (max-width: 39.9375em) {
          padding: 0 15px;
     }
   }
       /*/ medium /*/
-    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
-      padding-top:40px;
-    }
-      /*/ large /*/
-    @media screen and (min-width: 64em) {
-     padding-top: 90px;
-   }
+  //   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  //     padding-top:190px;
+  //   }
+  //     /*/ large /*/
+  //   @media screen and (min-width: 64em) {
+  //    padding-top: 190px;
+  //  }
 }
 
 
  #sticky-navigation {
    padding: 80px auto;
    display:block;
+   position: absolute;
        a {
       font-family: 'Montserrat';
       font-size: 0.9rem;
@@ -79,8 +81,15 @@ max-width: 100rem;
       @media screen and (max-width: 39.9375em) {
             font-size:0.9rem;
           }
-      &:hover { color:#555; }
+      &:hover { color:#777; }
    }
+    @media screen and (max-width: 39.9375em) {
+      .menu > li > a {
+        display: block;
+        padding: 0.7rem 0.75rem;
+        line-height: 1;
+      }
+    }
  }
 
  .top-nav{
@@ -105,14 +114,14 @@ max-width: 100rem;
 
 #contact{
 margin-bottom:60px;
-  a {
+  p {
   font-family: 'Cutive Mono', monospace;
   font-size: 1rem;
   color: #222;
-  border-bottom: solid #222 1px;
-  transition: all 0.2s linear;
+;
+  a{ color:#333;
   &:hover { color:#777; }
-  }
+} }
 }
 
 .skills {

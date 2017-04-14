@@ -1,7 +1,18 @@
-window.appState = {
-  fadeInStart: 125,
-  fadeInEnd: 700,
+// Configurable Settings
+window.appSettings = {
+  colourOpacity: 0.9,
 };
+
+// Constant Values
+window.appConstants = {
+  fadeInStart: 150,
+  fadeInEnd: 400,
+};
+
+// Application State
+window.appState = {};
+
+
 window.updateAppState = function(key, value) {
   if(!this.appState[key] || this.appState[key] !== value) {
     var newState = this.appState;
@@ -45,35 +56,44 @@ $(window).resize(function() {
 // Handles Sticky Navigation
 $(window).scroll(function() {
   // Handle Navigation Position Styles
-  if(window.scrollY >= 100 && !this.appState.stickyApplied) {
+  if(window.scrollY > 100 && !this.appState.stickyApplied) {
     $('#sticky-navigation').css('position', 'fixed');
     $('#sticky-navigation').css('padding-top', 0);
     console.log('sticky applied!')
     this.updateAppState('stickyApplied', true);
     // Intro div
   } else if (window.scrollY < 100 && !!this.appState.stickyApplied) {
-    $('#sticky-navigation').css('position', 'relative');
+    $('#sticky-navigation').css('position', 'absolute');
     $('#sticky-navigation').css('padding-top', 100);
     this.updateAppState('stickyApplied', false);
   }
+});
 
-  // Handle Introduction Styles
-  if(this.appState.stickyApplied && !this.appState.paddingAdjusted) {
-    var introTopPadding = parseInt($('.intro').css('padding-top').replace('px',''));
-    console.log('INTRO TOP PADDING', introTopPadding);
-    $('.intro').css('padding-top', (this.appState.defaultNavHeight + introTopPadding) + 'px');
-    this.updateAppState('paddingAdjusted', true);
-  } else if (!this.appState.stickyApplied && this.appState.paddingAdjusted){
-    $('.intro').css('padding-top', 90 +'px');
-    this.updateAppState('paddingAdjusted', false);
-  }
-
+$(window).scroll(function() {
   // Handle Nav Background Fade In
-  if(window.scrollY > this.appState.fadeInStart && window.scrollY < this.appState.fadeInEnd) {
-    var alpha = parseFloat(window.scrollY - this.appState.fadeInStart) / (this.appState.fadeInEnd - this.appState.fadeInStart).toFixed(3);
+  if(window.scrollY > this.appConstants.fadeInStart && window.scrollY < this.appConstants.fadeInEnd) {
+    var alpha = (parseFloat(window.scrollY - this.appConstants.fadeInStart) / (this.appConstants.fadeInEnd - this.appConstants.fadeInStart).toFixed(3)) * this.appSettings.colourOpacity;
     var newRgba = 'rgba(255,255,255,' + alpha + ')';
     $('#sticky-navigation').css('background-color', newRgba);
-  } else if(window.scrollY <=  this.appState.fadeInStart) {
+
+  } else if(window.scrollY <=  this.appConstants.fadeInStart) {
     $('#sticky-navigation').css('background-color', 'rgba(0,0,0,0)');
   }
+});
+
+// Smooth Scrolling
+// Source: https://css-tricks.com/snippets/jquery/smooth-scrolling/
+$(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
 });
