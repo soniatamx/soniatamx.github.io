@@ -36,10 +36,12 @@ max-width: 100rem;
   /*/ medium /*/
 @include breakpoint(medium) {
     background: url('../img/bg-medium.jpg') no-repeat center center;
+    background-size: cover;
      }
 
  @include breakpoint(xlarge) {
          background: url('../img/bg-xlarge.jpg') no-repeat center center;
+         background-size: cover;
           }
  }
 

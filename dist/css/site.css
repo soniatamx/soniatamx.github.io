@@ -6931,10 +6931,12 @@ body {
   /*/ medium /*/ }
   @media print, screen and (min-width: 40em) {
     .hero {
-      background: url("../img/bg-medium.jpg") no-repeat center center; } }
+      background: url("../img/bg-medium.jpg") no-repeat center center;
+      background-size: cover; } }
   @media screen and (min-width: 75em) {
     .hero {
-      background: url("../img/bg-xlarge.jpg") no-repeat center center; } }
+      background: url("../img/bg-xlarge.jpg") no-repeat center center;
+      background-size: cover; } }
 
 .intro {
   padding-top: 190px;
