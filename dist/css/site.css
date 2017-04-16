@@ -6971,7 +6971,7 @@ body {
       line-height: 1; } }
 
 .top-nav {
-  background: rgba(255, 255, 255, 0);
+  background: white;
   z-index: 500;
   width: 100%; }
 
