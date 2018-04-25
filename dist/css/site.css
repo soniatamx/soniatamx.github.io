@@ -7042,6 +7042,9 @@ body {
         line-height: 1em; } }
   .reveal img {
     padding: 35px 60px; }
+    @media screen and (max-width: 39.9375em) {
+      .reveal img {
+        padding: 35px 0px; } }
   .reveal p {
     width: 70%;
     margin: 20px auto;
