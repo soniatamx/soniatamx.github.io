@@ -6917,6 +6917,9 @@ body {
     margin: 60px auto;
     font-weight: bold;
     color: #F48FB1; }
+  body .modal-list {
+    width: 70%;
+    margin: 0 auto; }
 
 .full {
   max-width: 100rem; }
