@@ -25,8 +25,10 @@ body {
   }
 
   .modal-list {
+      @media screen and (min-width: 39.94em) {
     width: 70%;
     margin: 0 auto;
+}
   }
 
 }
