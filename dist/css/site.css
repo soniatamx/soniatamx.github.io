@@ -6902,13 +6902,14 @@ body {
   background: #fafafa;
   font-family: 'Lora';
   font-size: 16px;
-  color: #444; }
+  color: #333; }
   body p {
     line-height: 1.6; }
   body h1 {
     font-family: 'Lato';
     font-size: 1.5rem;
-    text-transform: none; }
+    text-transform: none;
+    font-weight: 400; }
   body h2 {
     font-family: 'Lato';
     font-size: 2rem;
@@ -6916,57 +6917,44 @@ body {
     text-align: center;
     margin: 60px auto;
     font-weight: bold;
-    color: #F48FB1; }
-  body .modal-list {
-    width: 70%;
-    margin: 0 auto; }
+    color: #26C6DA; }
+  @media screen and (min-width: 39.94em) {
+    body .modal-list {
+      width: 70%;
+      margin: 0 auto; } }
 
 .full {
   max-width: 100rem; }
 
 .hero {
-  background: url("../img/bg.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 905px;
-  /*/ medium /*/ }
-  @media print, screen and (min-width: 40em) {
-    .hero {
-      background: url("../img/bg-medium.jpg") no-repeat center center;
-      background-size: cover; } }
-  @media screen and (min-width: 75em) {
-    .hero {
-      background: url("../img/bg-xlarge.jpg") no-repeat center center;
-      background-size: cover; } }
+  background-color: #f7f7f7;
+  min-height: 205px; }
 
 .intro {
-  padding-top: 190px;
-  /*/ small /*/
-  /*/ medium /*/ }
+  padding: 100px 0 50px 0;
+  font-size: 20px; }
   @media screen and (max-width: 39.9375em) {
     .intro p {
       padding: 0 15px; } }
 
 #sticky-navigation {
-  padding: 80px auto;
+  padding: 20px auto;
   display: block;
   position: absolute; }
   #sticky-navigation a {
     font-family: 'Lato';
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #333;
     text-transform: none;
     margin: 20px;
-    text-align: center;
     display: block;
     /*/ small /*/ }
     @media screen and (max-width: 39.9375em) {
       #sticky-navigation a {
         font-size: 0.9rem; } }
     #sticky-navigation a:hover {
-      color: #777; }
+      color: #999;
+      border-bottom: solid 0.4px #999; }
   @media screen and (max-width: 39.9375em) {
     #sticky-navigation .menu > li > a {
       display: block;
@@ -6974,15 +6962,21 @@ body {
       line-height: 1; } }
 
 .top-nav {
-  background: rgba(255, 255, 255, 0);
+  background: #f7f7f7;
   z-index: 500;
   width: 100%; }
 
-#logo {
+#open {
   display: block;
-  width: 200px;
-  height: 70px;
+  width: 300px;
+  height: 50px;
   margin: 55px auto; }
+  #open h1 {
+    font-size: 65px;
+    background: -webkit-linear-gradient(0deg, #EC407A 15%, #5C6BC0 48%, #26C6DA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #EC407A !important; }
 
 #work {
   padding-top: 50px;
@@ -7030,14 +7024,11 @@ body {
       padding: 3.5rem 6rem 2.5rem 6rem; } }
   .reveal h1 {
     font-size: 2.5em;
-    font-weight: 700;
+    font-weight: 400;
     margin-top: 50px;
     /*/ small /*/
     line-height: 3rem;
-    background: -webkit-linear-gradient(0deg, #EC407A 15%, #5C6BC0 48%, #26C6DA 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #f8c8cb !important;
+    color: #444;
     padding-top: 10px;
     text-align: center; }
     @media screen and (max-width: 39.9375em) {

@@ -57,30 +57,19 @@ $(window).resize(function() {
 // Handles Sticky Navigation
 $(window).scroll(function() {
   // Handle Navigation Position Styles
-  if(window.scrollY > 100 && !this.appState.stickyApplied) {
+  if(window.scrollY > 20 && !this.appState.stickyApplied) {
     $('#sticky-navigation').css('position', 'fixed');
     $('#sticky-navigation').css('padding-top', 0);
     console.log('sticky applied!')
     this.updateAppState('stickyApplied', true);
     // Intro div
-  } else if (window.scrollY < 100 && !!this.appState.stickyApplied) {
+  } else if (window.scrollY < 20 && !!this.appState.stickyApplied) {
     $('#sticky-navigation').css('position', 'absolute');
-    $('#sticky-navigation').css('padding-top', 100);
+    $('#sticky-navigation').css('padding-top', 20);
     this.updateAppState('stickyApplied', false);
   }
 });
 
-$(window).scroll(function() {
-  // Handle Nav Background Fade In
-  if(window.scrollY > this.appConstants.fadeInStart && window.scrollY < this.appConstants.fadeInEnd) {
-    var alpha = (parseFloat(window.scrollY - this.appConstants.fadeInStart) / (this.appConstants.fadeInEnd - this.appConstants.fadeInStart).toFixed(3)) * this.appSettings.colourOpacity;
-    var newRgba = 'rgba(255,255,255,' + alpha + ')';
-    $('#sticky-navigation').css('background-color', newRgba);
-
-  } else if(window.scrollY <=  this.appConstants.fadeInStart) {
-    $('#sticky-navigation').css('background-color', 'rgba(0,0,0,0)');
-  }
-});
 
 // Smooth Scrolling
 // Source: https://css-tricks.com/snippets/jquery/smooth-scrolling/
