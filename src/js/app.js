@@ -64,7 +64,7 @@ $(window).scroll(function() {
     // Intro div
   } else if (window.scrollY < 20 && !!this.appState.stickyApplied) {
     $('#sticky-navigation').css('position', 'absolute');
-    $('#sticky-navigation').css('padding-top', 20);
+    $('#sticky-navigation').css('padding-top', 0);
     this.updateAppState('stickyApplied', false);
   }
 });

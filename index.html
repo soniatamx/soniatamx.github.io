@@ -16,14 +16,11 @@
 
 <body>
   <section id="about" data-magellan-target="about"></section>
-
-
-
-<div id="introduction" class="hero small-12 align-center">
   <div data-sticky-container>
-    <div id="sticky-navigation" class="top-nav sticky" data-sticky data-anchor="introduction" data-options="" style="width:100%; padding-top:20px">
+    <div id="sticky-navigation" class="top-nav sticky" data-sticky data-anchor="introduction" data-options="" style="width:100%;">
       <nav data-magellan>
-        <ul class="horizontal menu align-center">
+        <ul class="top-nav-list horizontal menu left">
+          <li><a id ="logo" href="#about"><img src="/src/img/logo2.png"></a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -31,26 +28,35 @@
       </nav>
     </div>
   </div>
-      <div class="intro row column small-12 medium-6 large-5 ">
-        <div id="open">
-          <h1>Sonia Tam</h1>
+<div id="introduction" class="hero row">
+      <div class="intro columns small-12 medium-6 large-7 ">
+        <div class="large-12">
+          <div id="open" >
+            <h1>Sonia Tam</h1>
+          </div>
+          <div class="intro-text-container">
+            <p>
+              I’m a multidisciplinary designer based in Toronto who enjoys taking a data driven, user-centric approach. I like to talk about Japan, keyboards, and dogs.
+            </p>
+          </div>
         </div>
-        <p>
-          I’m a digital designer who likes to take a user-centric approach and enjoys talking about keyboards and dogs.</p><br/>
+      </div>
+      <div class="intro-image large-4">
+        <img src="/src/img/me.png" />
       </div>
 </div>
 
 
 <section id="work" data-magellan-target="work">
-    <div class="row full">
+    <div class="row">
 
-      <div class="small-12 medium-4">
+      <div class="small-12 medium-6 columns portfolio-piece-container">
         <a data-open="galleryModal-1"><img src="/src/img/portfolio/promo-thumb.jpg" class="thumbnail" alt=""></a>
         <div class="large reveal" id="galleryModal-1" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
           <div class="row">
             <div class="small-12 column">
               <h1>Toronto Star Touch Promo Site</h1>
-              <p><strong>Goals:</strong> Redesign Toronto Star Touch's website to highlight the app's features and get users more comfortable with the app’s gestures, animations and UI.</p>
+              <p><strong>Goals:</strong> Redesign Toronto Star Touch's website to highlight the app's features and educate users on the app’s gestures, animations and UI.</p>
               <p><strong>My Roles:</strong> Wireframing, prototyping, visual design</p>
               <img src="/src/img/portfolio/promo-1.png"  alt=""/>
               <div class="row align-center">
@@ -68,7 +74,7 @@
       </div>
 
 
-      <div class="small-12 medium-4">
+      <div class="small-12 medium-6 columns portfolio-piece-container">
         <a data-open="galleryModal-2"><img src="/src/img/portfolio/pc-thumb.jpg" class="thumbnail" alt=""></a>
         <div class="large reveal" id="galleryModal-2" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
           <div clas="row column">
@@ -81,6 +87,7 @@
                 <img src="/interactives/pcbl/capture.jpg" class="hide-for-large"/>
               <iframe class="ad show-for-large" src="/interactives/pcbl/index.html" width="980" height="670"></iframe>
                 <p><strong>Fully functional HTML5 ad.</strong> Swipe the fruit spread for a randomized recipe.</p>
+              <img src="/src/img/portfolio/pcbl-storyboard.png"  alt=""/>
               <button class="close-button" data-close aria-label="Close modal" type="button">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -89,17 +96,27 @@
         </div>
       </div>
 
-      <div class="small-12 medium-4">
-        <a data-open="galleryModal-3"><img src="/src/img/portfolio/nordstrom-thumb.jpg" class="thumbnail" alt=""></a>
+      <div class="small-12 medium-6 columns portfolio-piece-container">
+        <a data-open="galleryModal-3"><img src="/src/img/portfolio/voxel-thumb.png" class="thumbnail" alt=""></a>
         <div class="large reveal" id="galleryModal-3" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
           <div clas="row column">
             <div class="small-12">
-              <h1>Nordstrom</h1>
-              <p><strong>Goals:</strong> Create editorial and interactive ad units that emphasizes Nordstrom's premium, but accesible services and branding for the launch of their flagship store.</p>
-              <p><strong>My Roles: </strong>Art direction, editorial, interactive design</p>
-              <img src="/src/img/portfolio/nordstrom-1a.jpg" alt="">
-              <img src="/src/img/portfolio/nordstrom-1b.jpg" alt="">
-              <div class="responsive-embed"><video id="nordstrom-video" autoplay="autoplay" loop src="/src/img/portfolio/nordstrom-video.mp4" type="video/mp4"></video></div>
+              <h1>Voxel - Contractor Website in Progress</h1>
+              <p><strong>Goals:</strong> Redesign the website to increase the conversion rate by 5% (with the same amount of traffic)</p>
+              <p><strong>My Roles: </strong>UX/UI, prototyping, visual design</p>
+              <p><strong>Old Design:</strong></p>
+              <img src="/src/img/portfolio/voxel_responsive.png" alt="">
+              <p><strong>Aligning my goal with the users' needs</strong></p><p>Based on extensive research of the home renovation industry, analysis of existing competition in the area, and user research, it was clear that users wanted to quickly establish trust by being able to find a detailed portfolio, the scope of work that would be completed, and a contractor's credentials. In order to align their needs with my goal, I proposed 4 design ideas:
+              <ul class="modal-list">
+                <li>More prominently displayed badges</li>
+                <li>An FAQ page</li>
+                <li>Unbiased user reviews placed throughout the user's journey</li>
+                <li>The hero image redesigned to feature as navigation to the services</li>
+              </ul></p>
+              <img src="/src/img/portfolio/voxel-prototype_r.png" alt="">
+              <img src="/src/img/portfolio/voxel-wireframes.png" alt="">
+              <img src="/src/img/portfolio/voxel-styletile.png" alt="">
+              <img src="/src/img/portfolio/voxel-ia.png" alt="">
               <button class="close-button" data-close aria-label="Close modal" type="button">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -109,13 +126,13 @@
       </div>
 
 
-      <div class="small-12 medium-4">
+      <div class="small-12 medium-6 columns portfolio-piece-container">
         <a data-open="galleryModal-4"><img src="/src/img/portfolio/ux-thumb.png" class="thumbnail" alt=""></a>
         <div class="large reveal" id="galleryModal-4" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
           <div clas="row column">
             <div class="small-12">
               <h1>Toronto Star Touch </br>UX Guidelines</h1>
-              <p><strong>Goals:</strong> Create a a thorough and organized website that would serve as UX guidelines to the Toronto Star on how to create screens for the tablet app.</p>
+              <p><strong>Goals:</strong> Create a thorough and organized website that would serve as UX guidelines to the Toronto Star on how to create screens for the tablet app.</p>
               <p><strong>My Roles:</strong> HTML & CSS, JavaScript, UI/UX design, content writing</p>
               <img src="/src/img/portfolio/ux-1.jpg"  alt=""/>
               <img src="/src/img/portfolio/ux-2.jpg" alt=""/>
@@ -133,7 +150,7 @@
         </div>
       </div>
 
-      <div class="small-12 medium-4">
+      <div class="small-12 medium-6 columns portfolio-piece-container">
         <a data-open="galleryModal-5"><img src="/src/img/portfolio/blog_thumb.png" class="thumbnail" alt=""></a>
         <div class="large reveal" id="galleryModal-5" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
           <div clas="row column">
@@ -154,7 +171,7 @@
         </div>
       </div>
 
-      <div class="small-12 medium-4">
+      <div class="small-12 medium-6 columns portfolio-piece-container">
         <a data-open="galleryModal-6"><img src="/src/img/portfolio/soach-thumb.png" class="thumbnail" alt=""></a>
         <div class="large reveal" id="galleryModal-6" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
           <div clas="row column">
@@ -180,24 +197,27 @@
 
 <section id="contact" data-magellan-target="contact">
   <div class="row align-center">
-      <div class="small-12 large-4">
-        <h2>Say hi</h2>
+    <div class="small-12 large-4">
+      <div class="small-12 large-12">
+        <h2>Get in touch</h2>
       </div>
-  </div>
-  <div class="row align-center">
-      <div class="small-12">
+      <div class="small-12 footer-connect-box">
         <p class="text-center">
         <a href="mailto:me@soniatam.com">
-          <span style="border-bottom:solid #222 1px;">me@soniatam.com</span>
+          <span style="border-bottom:solid #222 1px;" class="my-email-address">me@soniatam.com</span>
         </a>
           <a href="mailto:me@soniatam.com">
-            <span class="fi-envelope-open iconic-md" title="Email" style="margin-left:120px;" aria-hidden="true"></span>
+            <span class="connect-icon fi-envelope-open iconic-md" title="Email"  aria-hidden="true"></span>
           </a>
           <a href="https://www.linkedin.com/in/sonia-tam-0604a472" target="_blank">
-            <span class="fi-social-linkedin iconic-md" title="LinkedIn" style="margin-left:10px;" aria-hidden="true"></span>
+            <span class="connect-icon fi-social-linkedin iconic-md" title="LinkedIn"  aria-hidden="true"></span>
           </a>
         </p>
       </div>
+    </div>
+  </div>
+  <div class="row align-center">
+
   </div>
 </section>
 

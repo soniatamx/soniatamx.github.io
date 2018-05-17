@@ -1,11 +1,11 @@
 body {
-  background: #fafafa;
+  background: #fFF;
   font-family: 'Lora';
   font-size: 16px;
   color: #333;
 
   p {
-    line-height: 1.6;
+    line-height: 1.75;
   }
 
   h1 {
@@ -17,12 +17,19 @@ body {
 
   h2 {
     font-family: 'Lato';
-    font-size:2rem;
+    font-size: 2rem;
     text-transform: none;
-    text-align: center;
-    margin: 60px auto;
+    /* text-align: center; */
+    margin: 60px 0 12px 0;
     font-weight: bold;
-    color: #26C6DA;
+    color: #EC407A;
+  }
+
+  .modal-list {
+      @media screen and (min-width: 39.94em) {
+    width: 70%;
+    margin: 0 auto;
+}
   }
 
 }
@@ -32,23 +39,41 @@ body {
 }
 
 .hero {
-  background-color: #f7f7f7;
+  background-color: #fff;
   min-height:205px;
+  padding: 2rem 0 4rem;
 }
 
  .intro {
    padding: 100px 0 50px 0;
-   font-size: 20px;
+   font-size: 16px;
+   line-height: 28px;
+
+   &-text-container {
+     float:right;
+   }
   p {
+    text-align: left;
+    width: 440px;
+    float: right;
     @media screen and (max-width: 39.9375em) {
       padding: 0 15px;
     }
   }
+
+  &-image {
+    padding: 9rem 1rem 0 3rem;
+  }
 }
 
+#logo {
+  width: 50%;
+  a:hover{
+    border: none;
+  }
+}
 
 #sticky-navigation {
-  padding: 20px auto;
   display:block;
   position: absolute;
   a {
@@ -56,7 +81,7 @@ body {
     font-size: 1rem;
     color: #333;
     text-transform: none;
-    margin: 20px;
+    margin: 10px;
     display: block;
     /*/ small /*/
     @media screen and (max-width: 39.9375em) {
@@ -74,18 +99,23 @@ body {
 }
 
 .top-nav {
- background: rgba(247, 247, 247, 1.0);
+ background: rgba(247, 246, 247, 1.0);
  z-index: 500;
  width: 100%;
+
+  &-list {
+    padding-left: 10rem;
+  }
 }
 
 #open {
  display: block;
- width: 300px;
- height: 50px;
- margin: 55px auto;
+ // width: 300px;
+ // height: 50px;
+ // margin: 55px auto;
   h1 {
-    font-size:65px;
+    font-size: 7.9rem;
+    text-align: right;
     background: -webkit-linear-gradient(0deg,#EC407A 15%,#5C6BC0 48%,#26C6DA 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -97,8 +127,23 @@ body {
 #work {
   padding-top: 50px;
   padding-bottom: 35px;
-  background-color: #fff;
+  background: rgba(247, 246, 247, 1.0);
+  .image-bottom-padding {
+    padding: 1rem;
+  }
+
+  .portfolio-piece-container {
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+    height: 370px;
+    overflow: hidden;
+    img {
+      margin-top: -3.25rem;
+      padding-bottom: 5rem;
+    }
+  }
 }
+
 
 #contact{
   margin-bottom:60px;
@@ -132,9 +177,9 @@ body {
   margin-bottom: 0;
   border: none;
   box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 1px 1px rgba(0,0,0,0.17);
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
   &:hover {
-    opacity: 0.75;
+    opacity: 0.65;
   }
 }
 
@@ -173,7 +218,10 @@ body {
   }
 
   img {
-    padding: 35px 60px;
+    padding: 20px 60px 50px 60px;
+    @media screen and (max-width: 39.9375em) {
+    padding: 25px 0px 50px 25px;
+    }
   }
 
   p {
@@ -196,4 +244,25 @@ body {
     transform:scale(0.75);
     margin: -4rem 0 -4rem -8.5rem ;
   }
+}
+
+
+.footer-connect-box {
+    padding: 1rem 1rem;
+    background: #fff;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #26C6DA;
+    border-style: solid;
+
+    .connect-icon {
+      display: inline-block;
+      padding: 1.5rem 0rem 0 1rem;
+    }
+
+    .my-email-address {
+      position: relative;
+      bottom: 11px;
+      left: -1.25rem;
+    }
 }
