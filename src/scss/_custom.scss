@@ -1,4 +1,7 @@
 body {
+  &.is-reveal-open {
+    width: 100%;
+  }
   background: #fFF;
   font-family: 'Lora';
   font-size: 16px;
@@ -44,27 +47,6 @@ body {
   padding: 2rem 0 4rem;
 }
 
- .intro {
-   padding: 100px 0 50px 0;
-   font-size: 16px;
-   line-height: 28px;
-
-   &-text-container {
-     float:right;
-   }
-  p {
-    text-align: left;
-    width: 440px;
-    float: right;
-    @media screen and (max-width: 39.9375em) {
-      padding: 0 15px;
-    }
-  }
-
-  &-image {
-    padding: 9rem 1rem 0 3rem;
-  }
-}
 
 #logo {
   width: 50%;
@@ -81,7 +63,7 @@ body {
     font-size: 1rem;
     color: #333;
     text-transform: none;
-    margin: 10px;
+    margin: 10px 0;
     display: block;
     /*/ small /*/
     @media screen and (max-width: 39.9375em) {
@@ -104,7 +86,30 @@ body {
  width: 100%;
 
   &-list {
-    padding-left: 10rem;
+
+    @include breakpoint(medium) {
+      padding-left: 2.25rem;
+    }
+    @include breakpoint(large) {
+      padding-left: 4rem;
+    }
+
+    .top-nav-logo {
+      a {
+        margin: 0;
+      }
+    }
+
+    .top-nav-list-text {
+      a {
+        border: none;
+        position: relative;
+        top: 0.5rem;
+        &:hover, &:active, &:focus {
+          border: none;
+        }
+      }
+    }
   }
 }
 
@@ -113,13 +118,65 @@ body {
  // width: 300px;
  // height: 50px;
  // margin: 55px auto;
+ h1 {
+   font-size: 3.5rem;
+   text-align: center;
+ }
+
+ @include breakpoint(medium) {
+   h1 {
+     text-align: right;
+     font-size: 4.5rem;
+   }
+ }
+
+ @include breakpoint(large) {
   h1 {
     font-size: 7.9rem;
-    text-align: right;
+  }
+ }
+
+  h1 {
     background: -webkit-linear-gradient(0deg,#EC407A 15%,#5C6BC0 48%,#26C6DA 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   	color: #EC407A!important;
+  }
+}
+
+
+ .intro {
+   padding: 100px 0 50px 0;
+   font-size: 16px;
+   line-height: 28px;
+
+   &-text-container {
+     float:right;
+   }
+
+  p {
+    text-align: left;
+    @include breakpoint(medium) {
+      width: 250px;
+    }
+    @include breakpoint(large) {
+      width: 440px;
+    }
+
+    float: right;
+    @media screen and (max-width: 39.9375em) {
+      padding: 0 15px;
+    }
+  }
+
+  &-image {
+
+    @include breakpoint(medium) {
+      padding: 7rem 0rem 0 4rem;
+    }
+    @include breakpoint(large) {
+      padding: 9rem 1rem 0 3rem;
+    }
   }
 }
 
@@ -133,13 +190,34 @@ body {
   }
 
   .portfolio-piece-container {
-    margin-bottom: 3rem;
-    padding: 0 2rem;
-    height: 370px;
+    padding: 0;
+    margin: 2rem 0;
+
+    @include breakpoint(medium) {
+      margin-bottom: 1.5rem;
+      padding: 0 1rem 0 1rem;
+      height: 250px;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 3rem;
+      padding: 0 2rem;
+      height: 370px;
+    }
+
+
     overflow: hidden;
     img {
-      margin-top: -3.25rem;
-      padding-bottom: 5rem;
+
+      @include breakpoint(medium) {
+        margin-top: -3.5rem;
+        padding-bottom: 5rem;
+      }
+
+      @include breakpoint(large) {
+        margin-top: -5rem;
+        padding-bottom: 5rem;
+      }
     }
   }
 }
@@ -189,13 +267,16 @@ body {
 
 .reveal {
 
-  /*/ small /*/
-  @media screen and (max-width: 39.9375em) {
-    padding: 1.5rem 3rem 0.5rem 3rem;
+
+  @include breakpoint(small) {
+    padding: 1.5rem 2rem 0.5rem 2rem;
   }
 
-  /*/ medium and up /*/
-  @media screen and (min-width: 39.94em) {
+  @include breakpoint(medium) {
+    padding: 3.5rem 3.5rem 2.5rem 3.5rem;
+  }
+
+  @include breakpoint(large) {
     padding: 3.5rem 6rem 2.5rem 6rem;
   }
 
@@ -207,7 +288,7 @@ body {
     font-weight: 400;
     margin-top: 50px;
     /*/ small /*/
-    @media screen and (max-width: 39.9375em) {
+    @include breakpoint(small) {
       line-height:1em;
     }
 
@@ -218,9 +299,10 @@ body {
   }
 
   img {
-    padding: 20px 60px 50px 60px;
-    @media screen and (max-width: 39.9375em) {
-    padding: 25px 0px 50px 25px;
+    padding: 25px 0px 50px 0;
+
+    @include breakpoint(medium) {
+      padding: 20px 60px 50px 60px;
     }
   }
 
@@ -257,7 +339,10 @@ body {
 
     .connect-icon {
       display: inline-block;
-      padding: 1.5rem 0rem 0 1rem;
+      padding: 1.5rem 0 0.75rem;
+      @include breakpoint(medium) {
+        padding: 1.5rem 0rem 0 1rem;
+      }
     }
 
     .my-email-address {
@@ -265,4 +350,10 @@ body {
       bottom: 11px;
       left: -1.25rem;
     }
+}
+
+.align-center {
+  img {
+    align-self: center;
+  }
 }
