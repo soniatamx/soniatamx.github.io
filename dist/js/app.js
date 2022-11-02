@@ -46,7 +46,7 @@ function instantiateModals() {
 
 instantiateModals();
 
-$('#galleryModal-3').hover(function() {
+$('#galleryModal-6').hover(function() {
   $('#nordstrom-video').get(0).play();
 });
 
