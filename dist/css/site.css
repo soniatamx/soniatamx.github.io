@@ -3949,22 +3949,8 @@ body {
   background-position-x: left;
   color: #14243C; }
 
-a {
-  background: linear-gradient(0deg, white, white) no-repeat right bottom/0 var(--bg-h);
-  transition: background-size 350ms;
-  --bg-h: 60%; }
-
-a:where(:hover, :focus-visible) {
-  background-size: 100% var(--bg-h);
-  background-position-x: left; }
-
 .underline {
   text-decoration: underline; }
-
-a {
-  text-decoration: none;
-  color: inherit;
-  line-height: 1; }
 
 img a {
   background-color: unset; }
@@ -4119,6 +4105,14 @@ img a {
   .row {
     padding: 0 1rem 0 1rem; } }
 
+.hover-line-link {
+  background: linear-gradient(0deg, white, white) no-repeat right bottom/0 var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 60%; }
+  .hover-line-link:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left; }
+
 .callout {
   border-radius: 8px;
   padding: 3rem 2rem 3rem 2rem;
@@ -4147,41 +4141,36 @@ img a {
     @media screen and (max-width: 39.9375em) {
       .callout img {
         margin-bottom: 2rem; } }
-
-.callout.blue {
-  background: linear-gradient(112deg, #D9EEFB, #EDF6FC);
-  border: 1px solid #2DB0FF;
-  box-shadow: 0px 6px 1px #EDF6FC; }
-  .callout.blue a {
-    color: #2DB0FF; }
-
-.callout.red {
-  background: linear-gradient(112deg, #F9E8E9, #FCF4F4);
-  border: 1px solid #FA747D;
-  box-shadow: 0px 6px 1px #FCF4F4; }
-  .callout.red a {
-    color: #FA747D; }
-
-.callout.green {
-  background: linear-gradient(112deg, #E9F8EA, #F5FBF5);
-  border: 1px solid #7DD97E;
-  box-shadow: 0px 6px 1px #F5FBF5; }
-  .callout.green a {
-    color: #7DD97E; }
-
-.callout.yellow {
-  background: linear-gradient(112deg, #FFF3D6, #FFF9EA);
-  border: 1px solid #FFB800;
-  box-shadow: 0px 6px 1px #FFF9EA; }
-  .callout.yellow a {
-    color: #FFB800; }
-
-.callout.purple {
-  background: linear-gradient(112deg, #EBE4F4, #F5F3F8);
-  border: 1px solid #9156ec;
-  box-shadow: 0px 6px 1px #F5F3F8; }
-  .callout.purple a {
-    color: #9156ec; }
+  .callout.blue {
+    background: linear-gradient(112deg, #D9EEFB, #EDF6FC);
+    border: 1px solid #2DB0FF;
+    box-shadow: 0px 6px 1px #EDF6FC; }
+    .callout.blue .callout-link {
+      color: #2DB0FF; }
+  .callout.red {
+    background: linear-gradient(112deg, #F9E8E9, #FCF4F4);
+    border: 1px solid #FA747D;
+    box-shadow: 0px 6px 1px #FCF4F4; }
+    .callout.red .callout-link {
+      color: #FA747D; }
+  .callout.green {
+    background: linear-gradient(112deg, #E9F8EA, #F5FBF5);
+    border: 1px solid #7DD97E;
+    box-shadow: 0px 6px 1px #F5FBF5; }
+    .callout.green .callout-link {
+      color: #7DD97E; }
+  .callout.yellow {
+    background: linear-gradient(112deg, #FFF3D6, #FFF9EA);
+    border: 1px solid #FFB800;
+    box-shadow: 0px 6px 1px #FFF9EA; }
+    .callout.yellow .callout-link {
+      color: #FFB800; }
+  .callout.purple {
+    background: linear-gradient(112deg, #EBE4F4, #F5F3F8);
+    border: 1px solid #9156ec;
+    box-shadow: 0px 6px 1px #F5F3F8; }
+    .callout.purple .callout-link {
+      color: #9156ec; }
 
 .role {
   list-style: none;
@@ -4282,15 +4271,9 @@ img a {
           padding-bottom: 5rem; } }
 
 #contact {
-  margin-bottom: 60px; }
+  margin-top: 60px; }
   #contact p {
-    font-family: 'Cutive Mono', monospace;
-    font-size: 1rem;
-    color: #222; }
-    #contact p a {
-      color: #333; }
-      #contact p a:hover {
-        color: #777; }
+    padding: 0 0 1rem 2rem; }
 
 .skills {
   margin: 60px auto 50px auto; }
