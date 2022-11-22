@@ -32,6 +32,7 @@
     "gulp-imagemin": "^3.1.1",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-pngquant": "^5.0.0",
-    "motion-ui": "^1.2.2"
+    "motion-ui": "^1.2.2",
+    "natives": "^1.1.6"
   }
 }
