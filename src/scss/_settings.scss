@@ -1,1 +1,816 @@
 @include foundation-everything($flex:true);
+
+//Root
+html {
+    font-size: 18px;
+    --container-padding: 30px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+//Colours
+$ink: #14243C;
+
+//Blue
+$blue-100: #2DB0FF;
+$blue-80: #5BBFFB;
+$blue-60: #87CEF9;
+$blue-40: #87CEF9;
+$blue-20: #D9EEFB;
+$blue-10: #EDF6FC;
+
+//Red
+$red-100: #FA747D;
+$red-80: #F5969C;
+$red-60: #F3B5B9;
+$red-40: #EFB9BC;
+$red-20: #F9E8E9;
+$red-10: #FCF4F4;
+
+//Purple
+$purple-100: #9156ec;
+$purple-80: #A777F1;
+$purple-60: #BE9EEF;
+$purple-40: #BFA4E9;
+$purple-20: #EBE4F4;
+$purple-10: #F5F3F8;
+
+//Green
+$green-100: #7DD97E;
+$green-80: #91E392;
+$green-60: #9EE79F;
+$green-40: #D3F2D3;
+$green-20: #E9F8EA;
+$green-10: #F5FBF5;
+
+//Yellow
+$yellow-100: #FFB800;
+$yellow-80: #F9CE62;
+$yellow-60: #F8D98B;
+$yellow-40: #FFE8AE;
+$yellow-20: #FFF3D6;
+$yellow-10: #FFF9EA;
+
+
+//Typography
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 3rem;
+    line-height: 1em;
+    color: $ink;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    @media screen and (max-width: 39.9375em) {
+        font-size: 2rem;
+      }
+
+}
+
+h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2rem;
+    line-height: 1.4em;
+    color: $ink;
+    font-weight: 600;
+    padding: 0 2rem 1rem;
+
+    @media screen and (max-width: 39.9375em) {
+        font-size: 1.5em;
+        padding: 0 1rem 0.5rem 1rem;
+      }
+    }    
+
+
+body {
+    &.is-reveal-open {
+      width: 100%;
+    }
+    background: #fFF;
+    font-family: 'Inter';
+    font-size: 17px;
+    color: $ink;
+    scroll-behavior: smooth;
+  
+    p {
+      line-height: 1.8rem;
+    }
+  
+  
+    .modal-list {
+        @media screen and (min-width: 39.94em) {
+      width: 70%;
+      margin: 0 auto;
+  }
+    }
+  
+  }
+
+.offset-green {
+    background:linear-gradient(180deg, transparent 65%, $green-40 60%);
+    transform: rotate(-1deg);
+}
+
+.offset-blue {
+    background:linear-gradient(180deg, transparent 65%, $blue-40 60%);
+    transform: rotate(-1deg);
+}
+
+.offset-purple {
+    background:linear-gradient(180deg, transparent 65%, $purple-40 60%);
+    transform: rotate(-1deg);
+}
+
+.offset-red {
+    background:linear-gradient(180deg, transparent 65%, $red-40 60%);
+    transform: rotate(-1deg);
+}
+
+.offset-yellow {
+    background:linear-gradient(180deg, transparent 65%, $yellow-40 60%);
+    transform: rotate(-1deg);
+}
+
+
+
+//Links
+.link {
+    transition: background-size 350ms;
+    --bg-h: 40%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $ink;
+}
+
+.blue {
+    background: linear-gradient(0deg, $blue-40, $blue-40) no-repeat right bottom / 0 var(--bg-h);
+}
+
+.green {
+    background: linear-gradient(0deg, $green-40, $green-40) no-repeat right bottom / 0 var(--bg-h);
+}
+
+.yellow {
+    background: linear-gradient(0deg, $yellow-40, $yellow-40) no-repeat right bottom / 0 var(--bg-h);
+}
+
+.red {
+    background: linear-gradient(0deg, $red-40, $red-40) no-repeat right bottom / 0 var(--bg-h);
+}
+
+.purple {
+    background: linear-gradient(0deg, $purple-40, $purple-40) no-repeat right bottom / 0 var(--bg-h);
+}
+
+
+.link:hover {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+    color: $ink;
+}
+      
+
+
+
+
+
+.underline {
+  text-decoration: underline;
+}
+
+
+// a {
+//   text-decoration: none;
+//   color: inherit;
+//   line-height: 1;
+// }
+
+img a{
+  background-color: unset;
+}
+
+  
+
+//Navigation
+$top-bar-padding: 1.5rem 0 0.5rem 0; // controls the un-stuck height of topbar
+$top-bar-bg: #F7F6F7;
+
+.top-bar {
+  padding:$top-bar-padding;
+  transition: padding 0.25s ease;
+  background: $top-bar-bg;
+  height: 100px;
+  width:100%;
+  
+
+  
+  @media (max-width: 979px) {
+      padding-top: 20px;
+      
+    }
+
+  .menu {
+    background: $top-bar-bg;
+
+    li {
+        padding-left: 2rem;
+        @media screen and (max-width: 39.9375em) {
+            padding: 0rem;
+        }
+    }
+
+    a {
+        color: $ink;
+    }
+  }
+}
+
+#sticky-navigation {
+    display:block;
+    position: absolute;
+    a {
+      font-family: 'Work Sans';
+      font-weight:500;
+      color: $ink;
+      text-transform: none;
+      display: block;
+      /*/ small /*/
+      @media screen and (max-width: 39.9375em) {
+        font-size:0.9rem;
+      }
+
+    }
+    @media screen and (max-width: 39.9375em) {
+      .menu > li > a {
+        display: block;
+        padding: 0.7rem 0.75rem;
+        line-height: 1;
+      }
+    }
+  }
+  
+  .top-nav {
+   background: rgba(247, 246, 247, 1.0);
+   z-index: 500;
+   width: 100%;
+  
+    &-list {
+  
+  
+      .top-nav-logo {
+        a {
+          margin: 0;
+        }
+      }
+  
+      .top-nav-list-text {
+        a {
+          border: none;
+          position: relative;
+          &:hover, &:active, &:focus {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+
+  
+  .full {
+    max-width: 100rem;
+  }
+  
+  .hero {
+    background-color: #fff;
+    min-height:205px;
+    padding: 2rem 0 4rem;
+  }
+  
+  
+  #logo {
+    font-weight: 700;
+    a:hover{
+      border: none;
+    }
+  }
+  
+
+//Divs
+
+.image-container {
+    background: hsla(240,6%,95%,.85);
+    display:flex;
+    justify-content: space-evenly;
+    min-width: 100%;
+    max-width: 1000%;
+    @media screen and (max-width: 39.9375em) {
+    flex-direction: column;
+    }
+}
+
+.image-container img {
+    box-shadow: 0 1px 3px rgba(9,41,120,0.13), 0 4px 8px rgba(0,0,0,.13);
+    border-radius: 4px;
+    margin: 0 1rem;
+    max-width: 100%;
+    max-height: 100%;
+    @media screen and (max-width: 39.9375em) {
+        max-width: 80%;
+        max-height: 80%;
+        margin: 1rem 0;
+}
+}
+
+
+.summary {
+    font-size:16px;
+    border-radius: 8px;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    margin-bottom: 2.5rem;
+    background-size:600% 600%;
+    animation: flow 9s ease infinite reverse;
+
+    @media screen and (max-width: 39.9375em) {
+    padding: 0.5rem;
+    }
+   
+    h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 1rem 2rem;
+    }
+}
+
+.summary.blue {
+    background: $blue-10;
+    border: 1px solid $blue-100;
+    box-shadow: 0px 6px 1px $blue-10;
+
+    h4{
+    color: $blue-100;
+    }
+    }
+
+.summary.red {
+    background: $red-10;
+    border: 1px solid $red-100;
+    box-shadow: 0px 6px 1px $red-10;
+
+    h4{
+    color: $red-100;
+    }
+    }
+
+.summary.purple {
+    background: $purple-10;
+    border: 1px solid $purple-100;
+    box-shadow: 0px 6px 1px $purple-10;
+
+    h4{
+    color: $purple-100;
+    }
+    }
+
+.summary.green {
+    background: $green-10;
+    border: 1px solid $green-100;
+    box-shadow: 0px 6px 1px $green-10;
+
+    h4{
+    color: $green-100;
+    }
+    }
+
+.summary.yellow {
+    background: $yellow-10;
+    border: 1px solid $yellow-100;
+    box-shadow: 0px 6px 1px $yellow-10;
+
+    h4{
+    color: $yellow-100;
+    }
+    }
+
+
+.label {
+    font-size: 17px;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem 0 0 ;
+    @media screen and (max-width: 39.9375em) {
+        margin-right:0.5rem;
+      }
+}
+
+.row {
+    @media screen and (max-width: 39.9375em) {
+        padding: 0 1rem 0 1rem;
+    }
+
+    
+}
+
+
+
+.hover-line-link {
+  background: linear-gradient(0deg, rgb(255, 255, 255), rgb(255, 255, 255)) no-repeat right bottom / 0 var(--bg-h);
+  transition: background-size 350ms;
+  --bg-h: 60%;
+
+  &:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+  }
+}
+
+//Callouts
+
+@mixin link-underline($class-name) {
+  #{$class-name} {
+    background: linear-gradient(0deg, rgb(255, 255, 255), rgb(255, 255, 255)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 60%;
+  }
+  #{$class-name}:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+  }
+}
+
+.callout {
+    border-radius: 8px;
+    padding: 3rem 2rem 3rem 2rem;
+    margin-bottom: 2.5rem;
+    background-size:600% 600%;
+    animation: flow 9s ease infinite reverse;
+    a {
+      font-size: 2rem;
+      line-height:2.2rem;
+      font-weight: 600;
+      margin: 1rem 0 2rem 0;
+    }
+    @media screen and (max-width: 39.9375em) {
+      padding: 2rem 0.5rem 2rem 0.5rem;
+      h3 {
+          margin: 2rem 0 1rem 0;
+      }
+    }
+    p {
+      font-size: 17px;
+      line-height: 32px;
+      text-align:left;
+      margin-bottom: 16px;
+    }
+    img {
+        transition: all .4s ease-out;
+        box-shadow: 
+        0 3px 4px rgba(0,0,0,.05),
+        0 7px 9px rgba(0,0,0,.06),
+        0 12px 14px rgba(0,0,0,.07),
+        0 19px 21px rgba(0,0,0,.08),
+        0 30px 34px rgba(0,0,0,.09)
+        ;
+        border-radius: 8px;
+        @media screen and (max-width: 39.9375em) {
+            margin-bottom: 2rem;
+        }
+   
+    }
+
+    // .callout-link {
+    //     background: linear-gradient(0deg, rgb(255, 255, 255), rgb(255, 255, 255)) no-repeat right bottom / 0 var(--bg-h);
+    //     transition: background-size 350ms;
+    //     --bg-h: 60%;
+      
+    //   &:where(:hover, :focus-visible) {
+    //     background-size: 100% var(--bg-h);
+    //     background-position-x: left;
+    //   }
+    // }
+  
+    &.blue {
+      background: linear-gradient(112deg,$blue-20,$blue-10);
+      border: 1px solid $blue-100;
+      box-shadow: 0px 6px 1px $blue-10;
+      .callout-link {
+        
+          color: $blue-100;
+      }
+  }
+  
+  &.red {
+      background: linear-gradient(112deg,$red-20,$red-10);
+      border: 1px solid $red-100;
+      box-shadow: 0px 6px 1px $red-10;
+      .callout-link {
+          color: $red-100;
+      }
+  }
+  
+  &.green {
+      background: linear-gradient(112deg,$green-20,$green-10);
+      border: 1px solid $green-100;
+      box-shadow: 0px 6px 1px $green-10;
+      .callout-link {
+          color: $green-100;
+      }
+  }
+  
+  &.yellow {
+      background: linear-gradient(112deg,$yellow-20,$yellow-10);
+      border: 1px solid $yellow-100;
+      box-shadow: 0px 6px 1px $yellow-10;
+      .callout-link {
+          color: $yellow-100;
+      }
+  }
+  
+  &.purple {
+      background: linear-gradient(112deg,$purple-20,$purple-10);
+      border: 1px solid $purple-100;
+      box-shadow: 0px 6px 1px $purple-10;
+      .callout-link {
+          color: $purple-100;
+      }
+  }
+  
+
+}
+
+
+// &.blue
+
+
+
+
+  
+  .role {
+    list-style: none;
+    margin: 0;
+  }
+  
+  .role-list{
+    border: 1px solid #333;
+    font-family: 'Work Sans';
+    border-radius: 3px;
+    margin-right: 0.3em;
+    padding: 0.2em 1em 0.3em 1em;
+    display: inline-block;
+  }
+  
+  .work-brief{
+    padding: 120px 20px 0 20px;
+    @include breakpoint(large) {
+    padding: 120px 0 0 40px;
+    }
+    padding-top: 120px;
+  }
+  
+  .work-image{
+    padding: 50px 0 0 0;
+    @include breakpoint(medium) {
+    padding: 120px 0 0 0;
+    }
+    @include breakpoint(large) {
+    padding: 120px 0 0 40px;
+    }
+  }
+  
+  .work-content{
+    img {
+      padding:0.5em 0 1em 0;
+      width:100%;
+      height:auto;
+      @include breakpoint(large) {
+      padding:0.5em 0 2em 0;
+      }
+    }
+  }
+  
+  
+   .intro {
+
+     
+     @include breakpoint(small) {
+        padding: 6rem 0rem 0 0rem;
+      }
+
+     @include breakpoint(medium) {
+        padding: 8rem 0rem 0 0rem;
+      }
+    
+      @include breakpoint(large) {
+        padding: 10rem 0rem 0 0rem;
+      }
+
+  
+    &img {
+  
+      @include breakpoint(medium) {
+        padding: 7rem 0rem 0 3rem;
+      }
+      @include breakpoint(large) {
+        padding: 6rem 1rem 0 3rem;
+      }
+    }
+  }
+ 
+
+.top-padding{
+    @include breakpoint(small) {
+        padding: 6rem 0rem 0 0rem;
+      }
+
+     @include breakpoint(medium) {
+        padding: 8rem 0rem 0 0rem;
+      }
+    
+      @include breakpoint(large) {
+        padding: 10rem 0rem 0 0rem;
+      } 
+}
+  
+.work {
+   margin-top: 4.7rem;
+
+    h1 {
+        box-sizing: border-box;
+        margin: 0 0 35px;
+        font-size: 50px;
+    }
+    
+    p {
+        padding: 0 2rem 1.5rem 2rem;
+        @media screen and (max-width: 39.9375em) {
+            padding: 0 1rem 0.5rem 1rem;
+            }
+    }
+
+
+    
+
+    .image-bottom-padding {
+      padding: 1rem;
+    }
+  
+    .portfolio-piece-container {
+      padding: 0;
+      margin: 2rem 0;
+  
+      @include breakpoint(medium) {
+        margin-bottom: 1.5rem;
+        padding: 0 1rem 0 1rem;
+        height: 250px;
+      }
+  
+      @include breakpoint(large) {
+        margin-bottom: 1rem;
+        padding: 0 2rem;
+        height: 370px;
+      }
+  
+  
+      overflow: hidden;
+      img {
+        margin: 1rem;
+  
+        @include breakpoint(medium) {
+          margin-top: -3.5rem;
+          padding-bottom: 5rem;
+        }
+  
+        @include breakpoint(large) {
+          margin-top: -5rem;
+          padding-bottom: 5rem;
+        }
+      }
+    }
+  }
+  
+  
+  #contact{
+    margin-top:60px;
+    text-align: center;
+    margin-bottom:20px;
+    }
+  
+  .skills {
+    margin: 60px auto 50px auto;
+  }
+  
+  .fi-brush, .fi-pencil {
+     &.iconic-lg {
+       &:before {
+         font-size: 40px;
+       }
+     }
+  }
+  
+  .work img {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .reveal-overlay{
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
+  .reveal.large {
+    @media print, screen and (min-width: 40em) {
+     width:100%;
+     max-width: 95rem;   
+    }
+    @media print, screen and (min-width: 40em) {
+        width:100%;
+        max-width: 95rem;   
+       }
+
+  }
+
+  .reveal {
+    top: 0px !important;
+    max-width: 95rem;
+    margin: 0 auto;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.17);
+  
+    h1 {
+      font-size: 2.5em;
+      font-weight: 400;
+      margin-top: 50px;
+      /*/ small /*/
+      @include breakpoint(small) {
+        line-height:1em;
+      }
+  
+      line-height: 3rem;
+        color: #444;
+      padding-top:10px;
+      text-align: center;
+    }
+  
+    img {
+      padding: 25px 0px 50px 0;
+  
+      @include breakpoint(medium) {
+        padding: 20px 60px 50px 60px;
+      }
+    }
+  
+    p {
+      width:70%;
+      margin: 20px auto;
+      /*/ small /*/
+      @media screen and (max-width: 39.9375em) {
+        width:100%;
+      }
+    }
+  }
+  
+  .ad {
+    margin: 20px 0 15px 0;
+    border: none;
+  }
+  
+  .transform {
+    @include breakpoint(medium only) {
+      transform:scale(0.75);
+      margin: -4rem 0 -4rem -8.5rem ;
+    }
+  }
+  
+  
+  .footer-connect-box {
+      padding: 1rem 1rem;
+      background: #fff;
+      border-radius: 5px;
+      border-width: 1px;
+      border-color: #26C6DA;
+      border-style: solid;
+  
+      .connect-icon {
+        display: inline-block;
+        padding: 1.5rem 0 0.75rem;
+        @include breakpoint(medium) {
+          padding: 1.5rem 0rem 0 1rem;
+        }
+      }
+
+  }
+  
+  .align-center {
+    img {
+      align-self: center;
+    }
+  }
+  
