@@ -1,36 +1,3 @@
-<!--
-
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⠋⠈⠙⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠤⢤⡀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠈⢇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠞⠀⠀⢠⡜⣦⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡃⠀⠀⠀⠀⠈⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⣠⠀⠀⠀⠀⢻⡘⡇
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠙⢶⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠚⢀⡼⠃⠀⠀⠀⠀⠸⣇⢳
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⣀⠖⠀⠀⠀⠀⠉⠀⠀⠈⠉⠛⠛⡛⢛⠛⢳⡶⠖⠋⠀⢠⡞⠀⠀⠀⠐⠆⠀⠀⣿⢸
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣀⣴⡟⠀⠀⢶⣶⣾⡿⠀⠀⣿⢸
-⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⡠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣏⠀⠀⠀⣶⣿⣿⡇⠀⠀⢏⡞
-⠀⠀⠀⠀⠀⠀⢀⡴⠛⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⣤⣾⣿⣿⠋⠀⠀⡀⣾⠁
-⠀⠀⠀⠀⠀⣠⠟⠁⠀⠀⠀⣀⠀⠀⠀⠀⢀⡟⠈⢀⣤⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⣏⡁⠀⠐⠚⠃⣿⠀
-⠀⠀⠀⠀⣴⠋⠀⠀⠀⡴⣿⣿⡟⣷⠀⠀⠊⠀⠴⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠀⠀⠀⠀⢹⡆
-⠀⠀⠀⣴⠃⠀⠀⠀⠀⣇⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
-⠀⠀⣸⠃⠀⠀⠀⢠⠀⠊⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⢲⣾⣿⡏⣾⣿⣿⣿⣿⠖⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧
-⠀⢠⡇⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠈⠛⠿⣽⣿⡿⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜
-⢀⡿⠀⠀⠀⠀⢀⣤⣶⣟⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
-⢸⠇⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
-⣼⠀⢀⡀⠀⠀⢷⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡇
-⡇⠀⠈⠀⠀⠀⣬⠻⣿⣿⣿⡿⠙⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠁
-⢹⡀⠀⠀⠀⠈⣿⣶⣿⣿⣝⡛⢳⠭⠍⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠃⠀
-⠸⡇⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣷⣦⣀⣀⣀⣤⣤⣴⡶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠇⠀⠀
-⠀⢿⡄⠀⠀⠀⠀⠀⠙⣇⠉⠉⠙⠛⠻⠟⠛⠛⠉⠙⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠋⠀⠀⠀
-⠀⠈⢧⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀
-⠀⠀⠘⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠱⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠛⢦⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⠴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠲⠤⣤⣤⣤⣄⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⠤⠴⠒⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-
-
-
-
--->
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -54,7 +21,7 @@
         <div class="top-bar">
           <div class="columns small-6">
             <div class="menu" data-dropdown-menu>
-            <span class="menu-text" style="padding:0px; font-weight: bold;"><a href="/index.html#Work">SONIA TAM.</a></span>
+            <span class="menu-text" style="padding:0px; font-weight: bold;"><a href="/index.html">SONIA TAM.</a></span>
             </div>
           </div>
           <div class="columns top-bar-right">
@@ -84,7 +51,7 @@
           me@soniatam.com</a>.
           </p>
     </div>
-    <div class="columns text-center">
+    <div class="columns small-12 medium-6 large-4 text-center">
       <img src="/src/img/me.png" />
     </div>
   </div>
@@ -112,10 +79,9 @@
 
             <div class="columns small-12 medium-12 large-6">
             <p><a class="callout-link hover-line-link" href="/foxtrot.html">Mobile App</br>Foxtrot</a></p>
-            <p>In the above example, we've combined the above pattern with the Responsive Toggler plugin, creating a responsive top bar with a toggle click trigger on mobile.</p>
-            <p>Scale your browser down to see the toggle happen.</p>
-            <span class="label secondary">UX</span>
-            <span class="label secondary">Mobile design</span>
+            <p>Foxtrot is an upscale convenience store with a mobile app that lets customers shop their curated collections of drinks, food, and everyday essentials.</p>
+            <span class="label secondary">Mobile app</span>
+            <span class="label secondary">UX design</span>
             <span class="label secondary">Research</span>
             </div>
 
@@ -134,8 +100,7 @@
 
             <div class="columns small-12 medium-12 large-6">
             <p><a class="callout-link hover-line-link" href="/startouch.html">Website</br>Toronto Star</p></a>
-            <p>In the above example, we've combined the above pattern with the Responsive Toggler plugin, creating a responsive top bar with a toggle click trigger on mobile.</p>
-            <p>Scale your browser down to see the toggle happen.</p>
+            <p>Star Touch was a tablet exclusive editorial app created by The Toronto Star. As an interactive designer I was tasked with designing and developing animated interactive ads, promotional websites, and a UX style guide for the editorial and design team to reference.</p>
             <span class="label secondary">UX</span>
             <span class="label secondary">Mobile design</span>
             <span class="label secondary">Research</span>
@@ -152,11 +117,10 @@
 
         <div class="columns small-12 medium-12 large-6">
         <p><a class="callout-link hover-line-link" href="/ldb-protected.html">Mobile App</br>International Law Database</a></p>
-        <p>In the above example, we've combined the above pattern with the Responsive Toggler plugin, creating a responsive top bar with a toggle click trigger on mobile.</p>
-        <p>Scale your browser down to see the toggle happen.</p>
-        <span class="label secondary">UX</span>
-        <span class="label secondary">Mobile design</span>
+        <p>This database is designed for human rights lawyers in the MENA region. There is restricted access to this type of information, so this app was designed and creation with confidentiality as a top priority.</p>
+        <span class="label secondary">Mobile app</span>
         <span class="label secondary">Research</span>
+        <span class="label secondary">UX Design</span>
       </div>
     </div>
   </div>
@@ -172,10 +136,10 @@
 
     <div class="columns small-12 medium-12 large-6">
     <p><a class="callout-link hover-line-link" href="yconic.html">Website</br>yconic.</a></p>
-    <p>In the above example, we've combined the above pattern with the Responsive Toggler plugin, creating a responsive top bar with a toggle click trigger on mobile.</p>
+    <p>Star Touch was a tablet exclusive editorial app created by The Toronto Star. As an interactive designer I was tasked with designing and developing animated interactive ads, promotional websites, and a UX style guide for the editorial and design team to reference.</p>
     <p>Scale your browser down to see the toggle happen.</p>
-    <span class="label secondary">UX</span>
-    <span class="label secondary">Mobile design</span>
+    <span class="label secondary">Website</span>
+    <span class="label secondary">UI Design</span>
     <span class="label secondary">Research</span>
   </div>
 </div>
@@ -192,11 +156,10 @@
 
 <div class="columns small-12 medium-12 large-6">
   <p><a class="callout-link hover-line-link" href="startouch_ads.html">Interactive Ads</br>Star Touch</a></p>
-  <p>In the above example, we've combined the above pattern with the Responsive Toggler plugin, creating a responsive top bar with a toggle click trigger on mobile.</p>
-  <p>Scale your browser down to see the toggle happen.</p>
-  <span class="label secondary">UX</span>
-  <span class="label secondary">Mobile design</span>
-  <span class="label secondary">Research</span>
+  <p>Star Touch was a tablet exclusive editorial app created by The Toronto Star. As an interactive designer I was tasked with designing and developing animated interactive ads, promotional websites, and a UX style guide for the editorial and design team to reference.</p>
+  <span class="label secondary">Motion design</span>
+  <span class="label secondary">Interaction design</span>
+  <span class="label secondary">Editorial</span>
 </div>
 </div>
 </div>

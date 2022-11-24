@@ -615,7 +615,7 @@ $top-bar-bg: #F7F6F7;
       }
 
   
-    &-image {
+    &img {
   
       @include breakpoint(medium) {
         padding: 7rem 0rem 0 3rem;
@@ -701,9 +701,8 @@ $top-bar-bg: #F7F6F7;
   
   #contact{
     margin-top:60px;
-    p {
-        padding: 0 0 1rem 2rem;
-    }
+    text-align: center;
+    margin-bottom:20px;
     }
   
   .skills {
